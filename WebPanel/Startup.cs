@@ -9,6 +9,9 @@ namespace WebPanel
         public void Configuration(IAppBuilder app)
         {
             ConfigureAuth(app);
+
+
+
         }
     }
 }
