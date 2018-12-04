@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VehicleSetupModelStoreContainer" CdmEntityContainer="VehicleSetupEntities">
+    <EntitySetMapping Name="AdditionalFields">
+      <EntityTypeMapping TypeName="VehicleSetupModel.AdditionalFields">
+        <MappingFragment StoreEntitySet="AdditionalFields">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetSubType">
+      <EntityTypeMapping TypeName="VehicleSetupModel.AssetSubType">
+        <MappingFragment StoreEntitySet="AssetSubType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AssetType">
+      <EntityTypeMapping TypeName="VehicleSetupModel.AssetType">
+        <MappingFragment StoreEntitySet="AssetType">
+          <ScalarProperty Name="IsVehicle" ColumnName="IsVehicle" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Attachments">
+      <EntityTypeMapping TypeName="VehicleSetupModel.Attachments">
+        <MappingFragment StoreEntitySet="Attachments">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="IsDefaultImage" ColumnName="IsDefaultImage" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Capacity">
+      <EntityTypeMapping TypeName="VehicleSetupModel.Capacity">
+        <MappingFragment StoreEntitySet="Capacity">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="Pallets" ColumnName="Pallets" />
+          <ScalarProperty Name="Spaces" ColumnName="Spaces" />
+          <ScalarProperty Name="CubicSpace" ColumnName="CubicSpace" />
+          <ScalarProperty Name="InternalHeight" ColumnName="InternalHeight" />
+          <ScalarProperty Name="InternalWidht" ColumnName="InternalWidht" />
+          <ScalarProperty Name="InternalLenght" ColumnName="InternalLenght" />
+          <ScalarProperty Name="Tare" ColumnName="Tare" />
+          <ScalarProperty Name="GVM" ColumnName="GVM" />
+          <ScalarProperty Name="GCM" ColumnName="GCM" />
+          <ScalarProperty Name="IsMainCapacity" ColumnName="IsMainCapacity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Complience">
+      <EntityTypeMapping TypeName="VehicleSetupModel.Complience">
+        <MappingFragment StoreEntitySet="Complience">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="ComplienceTypeID" ColumnName="ComplienceTypeID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="LicenceClass" ColumnName="LicenceClass" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
+          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComplienceSubType">
+      <EntityTypeMapping TypeName="VehicleSetupModel.ComplienceSubType">
+        <MappingFragment StoreEntitySet="ComplienceSubType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ComplienceType">
+      <EntityTypeMapping TypeName="VehicleSetupModel.ComplienceType">
+        <MappingFragment StoreEntitySet="ComplienceType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FleetAsset">
+      <EntityTypeMapping TypeName="VehicleSetupModel.FleetAsset">
+        <MappingFragment StoreEntitySet="FleetAsset">
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="Depot" ColumnName="Depot" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="FleetAssetMakeID" ColumnName="FleetAssetMakeID" />
+          <ScalarProperty Name="FleetAssetModelID" ColumnName="FleetAssetModelID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="SubTypeID" ColumnName="SubTypeID" />
+          <ScalarProperty Name="AxelWeight1" ColumnName="AxelWeight1" />
+          <ScalarProperty Name="AxelWeight2" ColumnName="AxelWeight2" />
+          <ScalarProperty Name="AxelWeight3" ColumnName="AxelWeight3" />
+          <ScalarProperty Name="FuelTypeID" ColumnName="FuelTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FleetAssetMake">
+      <EntityTypeMapping TypeName="VehicleSetupModel.FleetAssetMake">
+        <MappingFragment StoreEntitySet="FleetAssetMake">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FleetAssetModel">
+      <EntityTypeMapping TypeName="VehicleSetupModel.FleetAssetModel">
+        <MappingFragment StoreEntitySet="FleetAssetModel">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FleetAssetMakeID" ColumnName="FleetAssetMakeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FuelType">
+      <EntityTypeMapping TypeName="VehicleSetupModel.FuelType">
+        <MappingFragment StoreEntitySet="FuelType">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Fuel" ColumnName="Fuel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
