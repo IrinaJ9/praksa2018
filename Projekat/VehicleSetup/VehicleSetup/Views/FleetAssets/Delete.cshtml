@@ -59,15 +59,17 @@
         <dd>
             @Html.DisplayFor(model => model.AxelWeight2)
         </dd>
-
+        
+        @if (ViewBag.FleetAsset.AxelWeight3 != null)
+        {
         <dt>
-            @Html.DisplayNameFor(model => model.AxelWeight3)
+        @Html.DisplayNameFor(model => model.AxelWeight3)
         </dt>
 
         <dd>
             @Html.DisplayFor(model => model.AxelWeight3)
         </dd>
-
+        }
         <dt>
             @Html.DisplayNameFor(model => model.AssetSubType.SubType)
         </dt>
