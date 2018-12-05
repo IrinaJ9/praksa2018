@@ -198,6 +198,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\FleetAssetMakersController.cs" />
+    <Compile Include="Controllers\FleetAssetModelsController.cs" />
     <Compile Include="Controllers\FleetAssetsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
@@ -342,6 +344,16 @@
     <Content Include="Views\FleetAssets\Details.cshtml" />
     <Content Include="Views\FleetAssets\Edit.cshtml" />
     <Content Include="Views\FleetAssets\Index.cshtml" />
+    <Content Include="Views\FleetAssetMakers\Create.cshtml" />
+    <Content Include="Views\FleetAssetMakers\Delete.cshtml" />
+    <Content Include="Views\FleetAssetMakers\Details.cshtml" />
+    <Content Include="Views\FleetAssetMakers\Edit.cshtml" />
+    <Content Include="Views\FleetAssetMakers\Index.cshtml" />
+    <Content Include="Views\FleetAssetModels\Create.cshtml" />
+    <Content Include="Views\FleetAssetModels\Delete.cshtml" />
+    <Content Include="Views\FleetAssetModels\Details.cshtml" />
+    <Content Include="Views\FleetAssetModels\Edit.cshtml" />
+    <Content Include="Views\FleetAssetModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
