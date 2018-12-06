@@ -28,6 +28,7 @@
     <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="AssetSubTypes" Relationship="Self.FK_AssetSubType_AssetType" FromRole="AssetType" ToRole="AssetSubType" />
     <NavigationProperty Name="FleetAssets" Relationship="Self.FK_Details_AssetType" FromRole="AssetType" ToRole="FleetAsset" />
+    <Property Name="IsVehicle" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="Attachment">
     <Key>
@@ -49,16 +50,16 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FleetNo" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Pallets" Type="Int32" Nullable="false" />
-    <Property Name="Spaces" Type="Int32" Nullable="false" />
-    <Property Name="CubicSpace" Type="Decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="Pallets" Type="Int32" />
+    <Property Name="Spaces" Type="Int32" />
+    <Property Name="CubicSpace" Type="Decimal" Precision="9" Scale="2" />
     <Property Name="InternalHeight" Type="Decimal" Precision="7" Scale="2" />
     <Property Name="InternalWidht" Type="Decimal" Precision="7" Scale="2" />
     <Property Name="InternalLenght" Type="Decimal" Precision="7" Scale="2" />
-    <Property Name="Tare" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="GVM" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="GCM" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="IsMainCapacity" Type="Boolean" Nullable="false" />
+    <Property Name="Tare" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="GVM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="GCM" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="IsMainCapacity" Type="Boolean" />
     <NavigationProperty Name="FleetAsset" Relationship="Self.FK_Capacity_Details" FromRole="Capacity" ToRole="FleetAsset" />
   </EntityType>
   <EntityType Name="Complience">
@@ -84,7 +85,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Compliences" Relationship="Self.FK_Complience_ComplienceSubType" FromRole="ComplienceSubType" ToRole="Complience" />
   </EntityType>
   <EntityType Name="ComplienceType">
@@ -103,14 +104,14 @@
     <Property Name="RegistrationNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Depot" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="FleetAssetMakeID" Type="Int32" Nullable="false" />
     <Property Name="FleetAssetModelID" Type="Int32" Nullable="false" />
     <Property Name="TypeID" Type="Int32" Nullable="false" />
     <Property Name="SubTypeID" Type="Int32" Nullable="false" />
-    <Property Name="AxelWeight1" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="AxelWeight2" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="AxelWeight3" Type="Decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="AxelWeight1" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight2" Type="Decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight3" Type="Decimal" Precision="10" Scale="3" />
     <Property Name="FuelTypeID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="AdditionalFields" Relationship="Self.FK_AdditionalFields_Details" FromRole="FleetAsset" ToRole="AdditionalFields" />
     <NavigationProperty Name="AssetSubType" Relationship="Self.FK_Details_AssetSubType" FromRole="FleetAsset" ToRole="AssetSubType" />

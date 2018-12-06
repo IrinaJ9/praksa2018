@@ -23,6 +23,7 @@ namespace VehicleSetup3.Models
     
         public int ID { get; set; }
         public string Type { get; set; }
+        public bool IsVehicle { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AssetSubType> AssetSubTypes { get; set; }

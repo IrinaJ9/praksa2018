@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="VehicleSetupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="VehicleSetupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="AdditionalFields">
     <Key>
       <PropertyRef Name="ID" />
@@ -23,6 +23,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Type" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="IsVehicle" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Attachments">
     <Key>
@@ -43,16 +44,16 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Pallets" Type="int" Nullable="false" />
-    <Property Name="Spaces" Type="int" Nullable="false" />
-    <Property Name="CubicSpace" Type="decimal" Precision="9" Scale="2" Nullable="false" />
+    <Property Name="Pallets" Type="int" />
+    <Property Name="Spaces" Type="int" />
+    <Property Name="CubicSpace" Type="decimal" Precision="9" Scale="2" />
     <Property Name="InternalHeight" Type="decimal" Precision="7" Scale="2" />
     <Property Name="InternalWidht" Type="decimal" Precision="7" Scale="2" />
     <Property Name="InternalLenght" Type="decimal" Precision="7" Scale="2" />
-    <Property Name="Tare" Type="decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="GVM" Type="decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="GCM" Type="decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="IsMainCapacity" Type="bit" Nullable="false" />
+    <Property Name="Tare" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="GVM" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="GCM" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="IsMainCapacity" Type="bit" />
   </EntityType>
   <EntityType Name="Complience">
     <Key>
@@ -74,7 +75,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
   </EntityType>
   <EntityType Name="ComplienceType">
     <Key>
@@ -91,14 +92,14 @@
     <Property Name="RegistrationNo" Type="nvarchar" MaxLength="10" Nullable="false" />
     <Property Name="Depot" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Year" Type="nvarchar" MaxLength="4" Nullable="false" />
-    <Property Name="Description" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="100" />
     <Property Name="FleetAssetMakeID" Type="int" Nullable="false" />
     <Property Name="FleetAssetModelID" Type="int" Nullable="false" />
     <Property Name="TypeID" Type="int" Nullable="false" />
     <Property Name="SubTypeID" Type="int" Nullable="false" />
-    <Property Name="AxelWeight1" Type="decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="AxelWeight2" Type="decimal" Precision="10" Scale="3" Nullable="false" />
-    <Property Name="AxelWeight3" Type="decimal" Precision="10" Scale="3" Nullable="false" />
+    <Property Name="AxelWeight1" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight2" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight3" Type="decimal" Precision="10" Scale="3" />
     <Property Name="FuelTypeID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="FleetAssetMake">

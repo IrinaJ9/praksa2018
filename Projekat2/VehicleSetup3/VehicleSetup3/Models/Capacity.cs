@@ -16,16 +16,16 @@ namespace VehicleSetup3.Models
     {
         public int ID { get; set; }
         public string FleetNo { get; set; }
-        public int Pallets { get; set; }
-        public int Spaces { get; set; }
-        public decimal CubicSpace { get; set; }
+        public Nullable<int> Pallets { get; set; }
+        public Nullable<int> Spaces { get; set; }
+        public Nullable<decimal> CubicSpace { get; set; }
         public Nullable<decimal> InternalHeight { get; set; }
         public Nullable<decimal> InternalWidht { get; set; }
         public Nullable<decimal> InternalLenght { get; set; }
-        public decimal Tare { get; set; }
-        public decimal GVM { get; set; }
-        public decimal GCM { get; set; }
-        public bool IsMainCapacity { get; set; }
+        public Nullable<decimal> Tare { get; set; }
+        public Nullable<decimal> GVM { get; set; }
+        public Nullable<decimal> GCM { get; set; }
+        public Nullable<bool> IsMainCapacity { get; set; }
     
         public virtual FleetAsset FleetAsset { get; set; }
     }
