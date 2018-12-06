@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9a99be188edd4b26af43fb6421d17ccf" Name="Diagram1">
+        <EntityTypeShape EntityType="VehicleSetupModel.AdditionalField" Width="1.5" PointX="7.5" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AssetSubType" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AssetType" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.Attachment" Width="1.5" PointX="7.5" PointY="6.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.Capacity" Width="1.5" PointX="7.5" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.Complience" Width="1.5" PointX="10.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.ComplienceSubType" Width="1.5" PointX="8.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.ComplienceType" Width="1.5" PointX="8.25" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.FleetAsset" Width="1.5" PointX="5.25" PointY="6.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.FleetAssetMake" Width="1.5" PointX="3" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.FleetAssetModel" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.FuelType" Width="1.5" PointX="3" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="VehicleSetupModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="VehicleSetupModel.FK_AdditionalFields_Details" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_AssetSubType_AssetType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Details_AssetSubType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Details_AssetType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Attachments_Details" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Capacity_Details" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Complience_ComplienceSubType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Complience_ComplienceType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Complience_Details" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Details_FleetAssetMake" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Details_FleetAssetModel" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_Details_FuelType" ManuallyRouted="false" />
+        <AssociationConnector Association="VehicleSetupModel.FK_FleetAssetModel_FleetAssetMake" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
