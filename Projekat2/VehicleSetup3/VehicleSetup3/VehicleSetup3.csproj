@@ -176,6 +176,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AdditionalFieldsController.cs" />
+    <Compile Include="Controllers\AssetSubTypesController.cs" />
+    <Compile Include="Controllers\AssetTypesController.cs" />
     <Compile Include="Controllers\AttachmentsController.cs" />
     <Compile Include="Controllers\CapacitiesController.cs" />
     <Compile Include="Controllers\CompliencesController.cs" />
@@ -368,6 +371,21 @@
     <Content Include="Views\Attachments\Details.cshtml" />
     <Content Include="Views\Attachments\Edit.cshtml" />
     <Content Include="Views\Attachments\Index.cshtml" />
+    <Content Include="Views\AssetSubTypes\Create.cshtml" />
+    <Content Include="Views\AssetSubTypes\Delete.cshtml" />
+    <Content Include="Views\AssetSubTypes\Details.cshtml" />
+    <Content Include="Views\AssetSubTypes\Edit.cshtml" />
+    <Content Include="Views\AssetSubTypes\Index.cshtml" />
+    <Content Include="Views\AssetTypes\Create.cshtml" />
+    <Content Include="Views\AssetTypes\Delete.cshtml" />
+    <Content Include="Views\AssetTypes\Details.cshtml" />
+    <Content Include="Views\AssetTypes\Edit.cshtml" />
+    <Content Include="Views\AssetTypes\Index.cshtml" />
+    <Content Include="Views\AdditionalFields\Create.cshtml" />
+    <Content Include="Views\AdditionalFields\Delete.cshtml" />
+    <Content Include="Views\AdditionalFields\Details.cshtml" />
+    <Content Include="Views\AdditionalFields\Edit.cshtml" />
+    <Content Include="Views\AdditionalFields\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
