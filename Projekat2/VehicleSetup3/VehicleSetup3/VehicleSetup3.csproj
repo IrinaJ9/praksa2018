@@ -177,6 +177,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\FleetAssetMakesController.cs" />
+    <Compile Include="Controllers\FleetAssetModelsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -325,6 +326,11 @@
     <Content Include="Views\FleetAssetMakes\Details.cshtml" />
     <Content Include="Views\FleetAssetMakes\Edit.cshtml" />
     <Content Include="Views\FleetAssetMakes\Index.cshtml" />
+    <Content Include="Views\FleetAssetModels\Create.cshtml" />
+    <Content Include="Views\FleetAssetModels\Delete.cshtml" />
+    <Content Include="Views\FleetAssetModels\Details.cshtml" />
+    <Content Include="Views\FleetAssetModels\Edit.cshtml" />
+    <Content Include="Views\FleetAssetModels\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
