@@ -176,9 +176,11 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\ComplienceTypesController.cs" />
     <Compile Include="Controllers\FleetAssetMakesController.cs" />
     <Compile Include="Controllers\FleetAssetModelsController.cs" />
     <Compile Include="Controllers\FleetAssetsController.cs" />
+    <Compile Include="Controllers\FuelTypesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -317,11 +319,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\FleetAssetMakers\Create.cshtml" />
-    <Content Include="Views\FleetAssetMakers\Delete.cshtml" />
-    <Content Include="Views\FleetAssetMakers\Details.cshtml" />
-    <Content Include="Views\FleetAssetMakers\Edit.cshtml" />
-    <Content Include="Views\FleetAssetMakers\Index.cshtml" />
     <Content Include="Views\FleetAssetMakes\Create.cshtml" />
     <Content Include="Views\FleetAssetMakes\Delete.cshtml" />
     <Content Include="Views\FleetAssetMakes\Details.cshtml" />
@@ -337,6 +334,16 @@
     <Content Include="Views\FleetAssets\Details.cshtml" />
     <Content Include="Views\FleetAssets\Edit.cshtml" />
     <Content Include="Views\FleetAssets\Index.cshtml" />
+    <Content Include="Views\FuelTypes\Create.cshtml" />
+    <Content Include="Views\FuelTypes\Delete.cshtml" />
+    <Content Include="Views\FuelTypes\Details.cshtml" />
+    <Content Include="Views\FuelTypes\Edit.cshtml" />
+    <Content Include="Views\FuelTypes\Index.cshtml" />
+    <Content Include="Views\ComplienceTypes\Create.cshtml" />
+    <Content Include="Views\ComplienceTypes\Delete.cshtml" />
+    <Content Include="Views\ComplienceTypes\Details.cshtml" />
+    <Content Include="Views\ComplienceTypes\Edit.cshtml" />
+    <Content Include="Views\ComplienceTypes\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
