@@ -176,6 +176,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AttachmentsController.cs" />
+    <Compile Include="Controllers\CapacitiesController.cs" />
+    <Compile Include="Controllers\CompliencesController.cs" />
+    <Compile Include="Controllers\ComplienceSubTypesController.cs" />
     <Compile Include="Controllers\ComplienceTypesController.cs" />
     <Compile Include="Controllers\FleetAssetMakesController.cs" />
     <Compile Include="Controllers\FleetAssetModelsController.cs" />
@@ -344,6 +348,26 @@
     <Content Include="Views\ComplienceTypes\Details.cshtml" />
     <Content Include="Views\ComplienceTypes\Edit.cshtml" />
     <Content Include="Views\ComplienceTypes\Index.cshtml" />
+    <Content Include="Views\ComplienceSubTypes\Create.cshtml" />
+    <Content Include="Views\ComplienceSubTypes\Delete.cshtml" />
+    <Content Include="Views\ComplienceSubTypes\Details.cshtml" />
+    <Content Include="Views\ComplienceSubTypes\Edit.cshtml" />
+    <Content Include="Views\ComplienceSubTypes\Index.cshtml" />
+    <Content Include="Views\Compliences\Create.cshtml" />
+    <Content Include="Views\Compliences\Delete.cshtml" />
+    <Content Include="Views\Compliences\Details.cshtml" />
+    <Content Include="Views\Compliences\Edit.cshtml" />
+    <Content Include="Views\Compliences\Index.cshtml" />
+    <Content Include="Views\Capacities\Create.cshtml" />
+    <Content Include="Views\Capacities\Delete.cshtml" />
+    <Content Include="Views\Capacities\Details.cshtml" />
+    <Content Include="Views\Capacities\Edit.cshtml" />
+    <Content Include="Views\Capacities\Index.cshtml" />
+    <Content Include="Views\Attachments\Create.cshtml" />
+    <Content Include="Views\Attachments\Delete.cshtml" />
+    <Content Include="Views\Attachments\Details.cshtml" />
+    <Content Include="Views\Attachments\Edit.cshtml" />
+    <Content Include="Views\Attachments\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
