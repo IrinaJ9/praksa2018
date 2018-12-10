@@ -146,6 +146,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredDriverView' does not have a
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -154,6 +155,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredDriverView' does not have a
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="DateObtained" Type="date" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.AccredSubcontView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -178,6 +180,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredTrailerView' does not have 
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -186,6 +189,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredTrailerView' does not have 
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="DateObtained" Type="date" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.InductionDriverView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -194,11 +198,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.InductionDriverView' does not hav
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.InductionSubcontractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -207,11 +213,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.InductionSubcontractorView' does 
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -220,6 +228,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a pr
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -227,6 +236,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a pr
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="DateObtained" Type="date" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.LicenseView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -235,6 +245,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.LicenseView' does not have a prim
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -244,6 +255,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.LicenseView' does not have a prim
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.RatingTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -252,11 +264,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.RatingTrailerView' does not have 
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.RatingVehicleView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -265,11 +279,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.RatingVehicleView' does not have 
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -278,6 +294,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a p
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -287,6 +304,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a p
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="DateObtained" Type="date" />
           <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -295,6 +313,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
@@ -304,6 +323,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="DateObtained" Type="date" />
           <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
+          <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <Association Name="FK_AdditionalFields_Details">
           <End Role="FleetAsset" Type="Self.FleetAsset" Multiplicity="1" />
@@ -483,7 +503,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [AccredDriverView].[ValidFromDate] AS [ValidFromDate], 
     [AccredDriverView].[ExpiryDate] AS [ExpiryDate], 
     [AccredDriverView].[AlertOperation] AS [AlertOperation], 
-    [AccredDriverView].[DateObtained] AS [DateObtained]
+    [AccredDriverView].[DateObtained] AS [DateObtained], 
+    [AccredDriverView].[ID] AS [ID]
     FROM [dbo].[AccredDriverView] AS [AccredDriverView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="AccredSubcontView" EntityType="Self.AccredSubcontView" store:Type="Views" store:Schema="dbo">
@@ -505,7 +526,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [AccredTrailerView].[ValidFromDate] AS [ValidFromDate], 
     [AccredTrailerView].[ExpiryDate] AS [ExpiryDate], 
     [AccredTrailerView].[AlertOperation] AS [AlertOperation], 
-    [AccredTrailerView].[DateObtained] AS [DateObtained]
+    [AccredTrailerView].[DateObtained] AS [DateObtained], 
+    [AccredTrailerView].[ID] AS [ID]
     FROM [dbo].[AccredTrailerView] AS [AccredTrailerView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InductionDriverView" EntityType="Self.InductionDriverView" store:Type="Views" store:Schema="dbo">
@@ -513,7 +535,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [InductionDriverView].[FleetNo] AS [FleetNo], 
     [InductionDriverView].[Name] AS [Name], 
     [InductionDriverView].[Class] AS [Class], 
-    [InductionDriverView].[AlertOperation] AS [AlertOperation]
+    [InductionDriverView].[AlertOperation] AS [AlertOperation], 
+    [InductionDriverView].[ID] AS [ID]
     FROM [dbo].[InductionDriverView] AS [InductionDriverView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InductionSubcontractorView" EntityType="Self.InductionSubcontractorView" store:Type="Views" store:Schema="dbo">
@@ -521,7 +544,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [InductionSubcontractorView].[FleetNo] AS [FleetNo], 
     [InductionSubcontractorView].[Name] AS [Name], 
     [InductionSubcontractorView].[Class] AS [Class], 
-    [InductionSubcontractorView].[AlertOperation] AS [AlertOperation]
+    [InductionSubcontractorView].[AlertOperation] AS [AlertOperation], 
+    [InductionSubcontractorView].[ID] AS [ID]
     FROM [dbo].[InductionSubcontractorView] AS [InductionSubcontractorView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="InsuranceView" EntityType="Self.InsuranceView" store:Type="Views" store:Schema="dbo">
@@ -531,7 +555,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [InsuranceView].[Class] AS [Class], 
     [InsuranceView].[ValidFromDate] AS [ValidFromDate], 
     [InsuranceView].[ExpiryDate] AS [ExpiryDate], 
-    [InsuranceView].[DateObtained] AS [DateObtained]
+    [InsuranceView].[DateObtained] AS [DateObtained], 
+    [InsuranceView].[ID] AS [ID]
     FROM [dbo].[InsuranceView] AS [InsuranceView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="LicenseView" EntityType="Self.LicenseView" store:Type="Views" store:Schema="dbo">
@@ -543,7 +568,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [LicenseView].[LicenseNo] AS [LicenseNo], 
     [LicenseView].[ValidFromDate] AS [ValidFromDate], 
     [LicenseView].[ExpiryDate] AS [ExpiryDate], 
-    [LicenseView].[AlertOperation] AS [AlertOperation]
+    [LicenseView].[AlertOperation] AS [AlertOperation], 
+    [LicenseView].[ID] AS [ID]
     FROM [dbo].[LicenseView] AS [LicenseView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="RatingTrailerView" EntityType="Self.RatingTrailerView" store:Type="Views" store:Schema="dbo">
@@ -551,7 +577,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [RatingTrailerView].[FleetNo] AS [FleetNo], 
     [RatingTrailerView].[Name] AS [Name], 
     [RatingTrailerView].[Class] AS [Class], 
-    [RatingTrailerView].[AlertOperation] AS [AlertOperation]
+    [RatingTrailerView].[AlertOperation] AS [AlertOperation], 
+    [RatingTrailerView].[ID] AS [ID]
     FROM [dbo].[RatingTrailerView] AS [RatingTrailerView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="RatingVehicleView" EntityType="Self.RatingVehicleView" store:Type="Views" store:Schema="dbo">
@@ -559,7 +586,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [RatingVehicleView].[FleetNo] AS [FleetNo], 
     [RatingVehicleView].[Name] AS [Name], 
     [RatingVehicleView].[Class] AS [Class], 
-    [RatingVehicleView].[AlertOperation] AS [AlertOperation]
+    [RatingVehicleView].[AlertOperation] AS [AlertOperation], 
+    [RatingVehicleView].[ID] AS [ID]
     FROM [dbo].[RatingVehicleView] AS [RatingVehicleView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="RegTrailerView" EntityType="Self.RegTrailerView" store:Type="Views" store:Schema="dbo">
@@ -571,7 +599,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [RegTrailerView].[ExpiryDate] AS [ExpiryDate], 
     [RegTrailerView].[AlertOperation] AS [AlertOperation], 
     [RegTrailerView].[DateObtained] AS [DateObtained], 
-    [RegTrailerView].[LicenseNo] AS [LicenseNo]
+    [RegTrailerView].[LicenseNo] AS [LicenseNo], 
+    [RegTrailerView].[ID] AS [ID]
     FROM [dbo].[RegTrailerView] AS [RegTrailerView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="RegVehicleVIew" EntityType="Self.RegVehicleVIew" store:Type="Views" store:Schema="dbo">
@@ -583,7 +612,8 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     [RegVehicleVIew].[ExpiryDate] AS [ExpiryDate], 
     [RegVehicleVIew].[AlertOperation] AS [AlertOperation], 
     [RegVehicleVIew].[DateObtained] AS [DateObtained], 
-    [RegVehicleVIew].[LicenseNo] AS [LicenseNo]
+    [RegVehicleVIew].[LicenseNo] AS [LicenseNo], 
+    [RegVehicleVIew].[ID] AS [ID]
     FROM [dbo].[RegVehicleVIew] AS [RegVehicleVIew]</DefiningQuery>
           </EntitySet>
           <AssociationSet Name="FK_AdditionalFields_Details" Association="Self.FK_AdditionalFields_Details">
@@ -1042,6 +1072,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1050,6 +1081,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="AccredSubcontView">
           <Key>
@@ -1070,6 +1102,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1078,34 +1111,40 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="InductionDriverView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="InductionSubcontractorView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="InsuranceView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1113,12 +1152,14 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="LicenseView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1128,34 +1169,40 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="RatingTrailerView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="RatingVehicleView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="RegTrailerView">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1165,12 +1212,14 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
           <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
         <EntityType Name="RegVehicleVIew">
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+            <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
@@ -1180,6 +1229,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
           <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+          <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1337,6 +1387,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="AccredDriverViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.AccredDriverView">
               <MappingFragment StoreEntitySet="AccredDriverView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -1363,6 +1414,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="AccredTrailerViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.AccredTrailerView">
               <MappingFragment StoreEntitySet="AccredTrailerView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -1376,6 +1428,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="InductionDriverViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.InductionDriverView">
               <MappingFragment StoreEntitySet="InductionDriverView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="Class" ColumnName="Class" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1386,6 +1439,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="InductionSubcontractorViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.InductionSubcontractorView">
               <MappingFragment StoreEntitySet="InductionSubcontractorView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="Class" ColumnName="Class" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1396,6 +1450,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="InsuranceViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.InsuranceView">
               <MappingFragment StoreEntitySet="InsuranceView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
                 <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
@@ -1408,6 +1463,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="LicenseViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.LicenseView">
               <MappingFragment StoreEntitySet="LicenseView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
                 <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
@@ -1422,6 +1478,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="RatingTrailerViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.RatingTrailerView">
               <MappingFragment StoreEntitySet="RatingTrailerView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="Class" ColumnName="Class" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1432,6 +1489,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="RatingVehicleViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.RatingVehicleView">
               <MappingFragment StoreEntitySet="RatingVehicleView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="Class" ColumnName="Class" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
@@ -1442,6 +1500,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="RegTrailerViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.RegTrailerView">
               <MappingFragment StoreEntitySet="RegTrailerView">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
@@ -1456,6 +1515,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
           <EntitySetMapping Name="RegVehicleVIews">
             <EntityTypeMapping TypeName="VehicleSetupModel.RegVehicleVIew">
               <MappingFragment StoreEntitySet="RegVehicleVIew">
+                <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />

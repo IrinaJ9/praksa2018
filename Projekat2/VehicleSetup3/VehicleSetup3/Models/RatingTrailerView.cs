@@ -18,5 +18,6 @@ namespace VehicleSetup3.Models
         public string Name { get; set; }
         public string Class { get; set; }
         public string AlertOperation { get; set; }
+        public int ID { get; set; }
     }
 }

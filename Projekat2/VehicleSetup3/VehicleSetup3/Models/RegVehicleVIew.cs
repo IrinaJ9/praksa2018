@@ -22,5 +22,6 @@ namespace VehicleSetup3.Models
         public string AlertOperation { get; set; }
         public Nullable<System.DateTime> DateObtained { get; set; }
         public string LicenseNo { get; set; }
+        public int ID { get; set; }
     }
 }

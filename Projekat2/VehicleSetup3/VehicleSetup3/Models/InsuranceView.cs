@@ -20,5 +20,6 @@ namespace VehicleSetup3.Models
         public Nullable<System.DateTime> ValidFromDate { get; set; }
         public Nullable<System.DateTime> ExpiryDate { get; set; }
         public Nullable<System.DateTime> DateObtained { get; set; }
+        public int ID { get; set; }
     }
 }
