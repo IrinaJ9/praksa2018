@@ -31,6 +31,17 @@
         <AssociationConnector Association="VehicleSetupModel.FK_Details_FleetAssetModel" ManuallyRouted="false" />
         <AssociationConnector Association="VehicleSetupModel.FK_Details_FuelType" ManuallyRouted="false" />
         <AssociationConnector Association="VehicleSetupModel.FK_FleetAssetModel_FleetAssetMake" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AccredDriverView" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AccredSubcontView" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AccredTrailerView" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.InductionDriverView" Width="1.5" PointX="10.375" PointY="11.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.InductionSubcontractorView" Width="1.5" PointX="12.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.InsuranceView" Width="1.5" PointX="12.375" PointY="3.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.LicenceView" Width="1.5" PointX="12.375" PointY="11.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.RatingTrailerView" Width="1.5" PointX="13.375" PointY="6.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.RatingVehicleView" Width="1.5" PointX="14.375" PointY="0.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.RegTrailerView" Width="1.5" PointX="5.375" PointY="14.75" />
+        <EntityTypeShape EntityType="VehicleSetupModel.RegVehicleView" Width="1.5" PointX="14.375" PointY="9.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
