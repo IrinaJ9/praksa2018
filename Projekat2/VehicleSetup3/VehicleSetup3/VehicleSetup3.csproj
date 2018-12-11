@@ -426,7 +426,7 @@
     <Content Include="Views\Compliences\AccreitationDriverView.cshtml" />
     <Content Include="Views\Compliences\AccreditationSubContractorView.cshtml" />
     <Content Include="Views\Compliences\AccreditationTrailerView.cshtml" />
-    <Content Include="Views\Compliences\RationgVehicleView.cshtml" />
+    <Content Include="Views\Compliences\RatingVehicleView.cshtml" />
     <Content Include="Views\Compliences\RatingTrailerView.cshtml" />
     <Content Include="Views\Compliences\InductionDriverView.cshtml" />
     <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
