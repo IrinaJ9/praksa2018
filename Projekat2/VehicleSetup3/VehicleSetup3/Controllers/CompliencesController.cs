@@ -20,6 +20,7 @@ namespace VehicleSetup3.Controllers
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
+        #region views
         public ActionResult License()
         {
             var license = db.LicenseViews;
@@ -76,6 +77,7 @@ namespace VehicleSetup3.Controllers
             var regVeh = db.RegTrailerViews;
             return View("RegistrationTrailerView", regVeh.ToList());
         }
+        #endregion
         // GET: Compliences/Details/5
         public ActionResult Details(int? id)
         {
