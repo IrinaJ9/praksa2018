@@ -149,7 +149,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredDriverView' does not have a
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
@@ -164,16 +168,25 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredSubcontView' does not have 
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+<<<<<<< HEAD
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          </Key>
+          <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="DateObtained" Type="date" />
+<<<<<<< HEAD
           <Property Name="ID" Type="int" Nullable="false" />
+=======
+>>>>>>> BrankoBranch
         </EntityType>
         <!--Errors Found During Generation:
 warning 6002: The table/view 'VehicleSetup.dbo.AccredTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
@@ -185,7 +198,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.AccredTrailerView' does not have 
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
@@ -203,7 +220,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.InductionDriverView' does not hav
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="ID" Type="int" Nullable="false" />
@@ -218,7 +239,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.InductionSubcontractorView' does 
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="ID" Type="int" Nullable="false" />
@@ -233,7 +258,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a pr
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
@@ -241,8 +270,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a pr
           <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+<<<<<<< HEAD
 warning 6002: The table/view 'VehicleSetup.dbo.LicenceView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="LicenceView">
+=======
+warning 6002: The table/view 'VehicleSetup.dbo.LicenseView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="LicenseView">
+>>>>>>> BrankoBranch
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
@@ -250,7 +284,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.LicenceView' does not have a prim
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="LicenceClass" Type="nvarchar" MaxLength="30" />
           <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
@@ -269,7 +307,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RatingTrailerView' does not have 
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="ID" Type="int" Nullable="false" />
@@ -284,7 +326,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RatingVehicleView' does not have 
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
           <Property Name="ID" Type="int" Nullable="false" />
@@ -299,7 +345,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
@@ -309,8 +359,13 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a p
           <Property Name="ID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
+<<<<<<< HEAD
 warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
         <EntityType Name="RegVehicleView">
+=======
+warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="RegVehicleVIew">
+>>>>>>> BrankoBranch
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
@@ -318,7 +373,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
+<<<<<<< HEAD
           <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
+=======
+          <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
           <Property Name="ValidFromDate" Type="date" />
           <Property Name="ExpiryDate" Type="date" />
@@ -517,8 +576,12 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
     [AccredSubcontView].[ValidFromDate] AS [ValidFromDate], 
     [AccredSubcontView].[ExpiryDate] AS [ExpiryDate], 
     [AccredSubcontView].[AlertOperation] AS [AlertOperation], 
+<<<<<<< HEAD
     [AccredSubcontView].[DateObtained] AS [DateObtained], 
     [AccredSubcontView].[ID] AS [ID]
+=======
+    [AccredSubcontView].[DateObtained] AS [DateObtained]
+>>>>>>> BrankoBranch
     FROM [dbo].[AccredSubcontView] AS [AccredSubcontView]</DefiningQuery>
           </EntitySet>
           <EntitySet Name="AccredTrailerView" EntityType="Self.AccredTrailerView" store:Type="Views" store:Schema="dbo">
@@ -562,6 +625,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
     [InsuranceView].[ID] AS [ID]
     FROM [dbo].[InsuranceView] AS [InsuranceView]</DefiningQuery>
           </EntitySet>
+<<<<<<< HEAD
           <EntitySet Name="LicenceView" EntityType="Self.LicenceView" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [LicenceView].[FleetNo] AS [FleetNo], 
@@ -574,6 +638,20 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
     [LicenceView].[AlertOperation] AS [AlertOperation], 
     [LicenceView].[ID] AS [ID]
     FROM [dbo].[LicenceView] AS [LicenceView]</DefiningQuery>
+=======
+          <EntitySet Name="LicenseView" EntityType="Self.LicenseView" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [LicenseView].[FleetNo] AS [FleetNo], 
+    [LicenseView].[Name] AS [Name], 
+    [LicenseView].[Class] AS [Class], 
+    [LicenseView].[LicenceClass] AS [LicenceClass], 
+    [LicenseView].[LicenseNo] AS [LicenseNo], 
+    [LicenseView].[ValidFromDate] AS [ValidFromDate], 
+    [LicenseView].[ExpiryDate] AS [ExpiryDate], 
+    [LicenseView].[AlertOperation] AS [AlertOperation], 
+    [LicenseView].[ID] AS [ID]
+    FROM [dbo].[LicenseView] AS [LicenseView]</DefiningQuery>
+>>>>>>> BrankoBranch
           </EntitySet>
           <EntitySet Name="RatingTrailerView" EntityType="Self.RatingTrailerView" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
@@ -606,6 +684,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
     [RegTrailerView].[ID] AS [ID]
     FROM [dbo].[RegTrailerView] AS [RegTrailerView]</DefiningQuery>
           </EntitySet>
+<<<<<<< HEAD
           <EntitySet Name="RegVehicleView" EntityType="Self.RegVehicleView" store:Type="Views" store:Schema="dbo">
             <DefiningQuery>SELECT 
     [RegVehicleView].[FleetNo] AS [FleetNo], 
@@ -618,6 +697,20 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
     [RegVehicleView].[LicenseNo] AS [LicenseNo], 
     [RegVehicleView].[ID] AS [ID]
     FROM [dbo].[RegVehicleView] AS [RegVehicleView]</DefiningQuery>
+=======
+          <EntitySet Name="RegVehicleVIew" EntityType="Self.RegVehicleVIew" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [RegVehicleVIew].[FleetNo] AS [FleetNo], 
+    [RegVehicleVIew].[Name] AS [Name], 
+    [RegVehicleVIew].[Class] AS [Class], 
+    [RegVehicleVIew].[ValidFromDate] AS [ValidFromDate], 
+    [RegVehicleVIew].[ExpiryDate] AS [ExpiryDate], 
+    [RegVehicleVIew].[AlertOperation] AS [AlertOperation], 
+    [RegVehicleVIew].[DateObtained] AS [DateObtained], 
+    [RegVehicleVIew].[LicenseNo] AS [LicenseNo], 
+    [RegVehicleVIew].[ID] AS [ID]
+    FROM [dbo].[RegVehicleVIew] AS [RegVehicleVIew]</DefiningQuery>
+>>>>>>> BrankoBranch
           </EntitySet>
           <AssociationSet Name="FK_AdditionalFields_Details" Association="Self.FK_AdditionalFields_Details">
             <End Role="FleetAsset" EntitySet="FleetAsset" />
@@ -1064,11 +1157,19 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
           <EntitySet Name="InductionDriverViews" EntityType="VehicleSetupModel.InductionDriverView" />
           <EntitySet Name="InductionSubcontractorViews" EntityType="VehicleSetupModel.InductionSubcontractorView" />
           <EntitySet Name="InsuranceViews" EntityType="VehicleSetupModel.InsuranceView" />
+<<<<<<< HEAD
           <EntitySet Name="LicenceViews" EntityType="VehicleSetupModel.LicenceView" />
           <EntitySet Name="RatingTrailerViews" EntityType="VehicleSetupModel.RatingTrailerView" />
           <EntitySet Name="RatingVehicleViews" EntityType="VehicleSetupModel.RatingVehicleView" />
           <EntitySet Name="RegTrailerViews" EntityType="VehicleSetupModel.RegTrailerView" />
           <EntitySet Name="RegVehicleViews" EntityType="VehicleSetupModel.RegVehicleView" />
+=======
+          <EntitySet Name="LicenseViews" EntityType="VehicleSetupModel.LicenseView" />
+          <EntitySet Name="RatingTrailerViews" EntityType="VehicleSetupModel.RatingTrailerView" />
+          <EntitySet Name="RatingVehicleViews" EntityType="VehicleSetupModel.RatingVehicleView" />
+          <EntitySet Name="RegTrailerViews" EntityType="VehicleSetupModel.RegTrailerView" />
+          <EntitySet Name="RegVehicleVIews" EntityType="VehicleSetupModel.RegVehicleVIew" />
+>>>>>>> BrankoBranch
         </EntityContainer>
         <EntityType Name="AccredDriverView">
           <Key>
@@ -1078,7 +1179,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
@@ -1091,16 +1196,25 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
             <PropertyRef Name="Class" />
+<<<<<<< HEAD
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          </Key>
+          <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
+<<<<<<< HEAD
           <Property Name="ID" Type="Int32" Nullable="false" />
+=======
+>>>>>>> BrankoBranch
         </EntityType>
         <EntityType Name="AccredTrailerView">
           <Key>
@@ -1110,7 +1224,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
@@ -1126,7 +1244,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" />
@@ -1139,7 +1261,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" />
@@ -1152,14 +1278,22 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
           <Property Name="DateObtained" Type="DateTime" Precision="0" />
           <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="LicenceView">
+=======
+        <EntityType Name="LicenseView">
+>>>>>>> BrankoBranch
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
@@ -1167,7 +1301,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="LicenceClass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
           <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
@@ -1184,7 +1322,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" />
@@ -1197,7 +1339,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" />
@@ -1210,7 +1356,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
@@ -1219,7 +1369,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
           <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
           <Property Name="ID" Type="Int32" Nullable="false" />
         </EntityType>
+<<<<<<< HEAD
         <EntityType Name="RegVehicleView">
+=======
+        <EntityType Name="RegVehicleVIew">
+>>>>>>> BrankoBranch
           <Key>
             <PropertyRef Name="FleetNo" />
             <PropertyRef Name="Name" />
@@ -1227,7 +1381,11 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+<<<<<<< HEAD
           <Property Name="Name" Type="String" Nullable="false" MaxLength="15" FixedLength="false" Unicode="true" />
+=======
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+>>>>>>> BrankoBranch
           <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
           <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
           <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
@@ -1406,7 +1564,10 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
           <EntitySetMapping Name="AccredSubcontViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.AccredSubcontView">
               <MappingFragment StoreEntitySet="AccredSubcontView">
+<<<<<<< HEAD
                 <ScalarProperty Name="ID" ColumnName="ID" />
+=======
+>>>>>>> BrankoBranch
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -1466,9 +1627,15 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="LicenceViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.LicenceView">
               <MappingFragment StoreEntitySet="LicenceView">
+=======
+          <EntitySetMapping Name="LicenseViews">
+            <EntityTypeMapping TypeName="VehicleSetupModel.LicenseView">
+              <MappingFragment StoreEntitySet="LicenseView">
+>>>>>>> BrankoBranch
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
                 <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -1518,9 +1685,15 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleView' does not have a p
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+<<<<<<< HEAD
           <EntitySetMapping Name="RegVehicleViews">
             <EntityTypeMapping TypeName="VehicleSetupModel.RegVehicleView">
               <MappingFragment StoreEntitySet="RegVehicleView">
+=======
+          <EntitySetMapping Name="RegVehicleVIews">
+            <EntityTypeMapping TypeName="VehicleSetupModel.RegVehicleVIew">
+              <MappingFragment StoreEntitySet="RegVehicleVIew">
+>>>>>>> BrankoBranch
                 <ScalarProperty Name="ID" ColumnName="ID" />
                 <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
                 <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />

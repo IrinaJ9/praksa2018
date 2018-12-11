@@ -194,6 +194,15 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AccredDriverView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccredSubcontView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AccredTrailerView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\AdditionalField.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -231,6 +240,18 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\InductionDriverView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InductionSubcontractorView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InsuranceView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\LicenseView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Model1.Context.cs">
       <AutoGen>True</AutoGen>
@@ -246,6 +267,18 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RatingTrailerView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RatingVehicleView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RegTrailerView.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RegVehicleVIew.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -386,6 +419,17 @@
     <Content Include="Views\AdditionalFields\Details.cshtml" />
     <Content Include="Views\AdditionalFields\Edit.cshtml" />
     <Content Include="Views\AdditionalFields\Index.cshtml" />
+    <Content Include="Views\Compliences\License.cshtml" />
+    <Content Include="Views\Compliences\Insurance.cshtml" />
+    <Content Include="Views\Compliences\RegistrationVehicleView.cshtml" />
+    <Content Include="Views\Compliences\RegistrationTrailerView.cshtml" />
+    <Content Include="Views\Compliences\AccreitationDriverView.cshtml" />
+    <Content Include="Views\Compliences\AccreditationSubContractorView.cshtml" />
+    <Content Include="Views\Compliences\AccreditationTrailerView.cshtml" />
+    <Content Include="Views\Compliences\RatingVehicleView.cshtml" />
+    <Content Include="Views\Compliences\RatingTrailerView.cshtml" />
+    <Content Include="Views\Compliences\InductionDriverView.cshtml" />
+    <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

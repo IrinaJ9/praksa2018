@@ -382,5 +382,160 @@
       <End Role="FleetAssetMake" EntitySet="FleetAssetMakes" />
       <End Role="FleetAssetModel" EntitySet="FleetAssetModels" />
     </AssociationSet>
+    <EntitySet Name="AccredDriverViews" EntityType="VehicleSetupModel.AccredDriverView" />
+    <EntitySet Name="AccredSubcontViews" EntityType="VehicleSetupModel.AccredSubcontView" />
+    <EntitySet Name="AccredTrailerViews" EntityType="VehicleSetupModel.AccredTrailerView" />
+    <EntitySet Name="InductionDriverViews" EntityType="VehicleSetupModel.InductionDriverView" />
+    <EntitySet Name="InductionSubcontractorViews" EntityType="VehicleSetupModel.InductionSubcontractorView" />
+    <EntitySet Name="InsuranceViews" EntityType="VehicleSetupModel.InsuranceView" />
+    <EntitySet Name="LicenseViews" EntityType="VehicleSetupModel.LicenseView" />
+    <EntitySet Name="RatingTrailerViews" EntityType="VehicleSetupModel.RatingTrailerView" />
+    <EntitySet Name="RatingVehicleViews" EntityType="VehicleSetupModel.RatingVehicleView" />
+    <EntitySet Name="RegTrailerViews" EntityType="VehicleSetupModel.RegTrailerView" />
+    <EntitySet Name="RegVehicleVIews" EntityType="VehicleSetupModel.RegVehicleVIew" />
   </EntityContainer>
+  <EntityType Name="AccredDriverView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="AccredSubcontView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="AccredTrailerView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="InductionDriverView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InductionSubcontractorView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="InsuranceView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+  </EntityType>
+  <EntityType Name="LicenseView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="LicenceClass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RatingTrailerView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RatingVehicleView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RegTrailerView">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="RegVehicleVIew">
+    <Key>
+      <PropertyRef Name="FleetNo" />
+      <PropertyRef Name="Name" />
+      <PropertyRef Name="Class" />
+    </Key>
+    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
+    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
+    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="DateObtained" Type="DateTime" Precision="0" />
+    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>

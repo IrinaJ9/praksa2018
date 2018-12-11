@@ -12,14 +12,16 @@ namespace VehicleSetup3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class InsuranceView
+    public partial class LicenseView
     {
         public string FleetNo { get; set; }
         public string Name { get; set; }
         public string Class { get; set; }
+        public string LicenceClass { get; set; }
+        public string LicenseNo { get; set; }
         public Nullable<System.DateTime> ValidFromDate { get; set; }
         public Nullable<System.DateTime> ExpiryDate { get; set; }
-        public Nullable<System.DateTime> DateObtained { get; set; }
+        public string AlertOperation { get; set; }
         public int ID { get; set; }
     }
 }

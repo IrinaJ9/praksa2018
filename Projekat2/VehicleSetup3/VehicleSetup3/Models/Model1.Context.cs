@@ -44,10 +44,10 @@ namespace VehicleSetup3.Models
         public virtual DbSet<InductionDriverView> InductionDriverViews { get; set; }
         public virtual DbSet<InductionSubcontractorView> InductionSubcontractorViews { get; set; }
         public virtual DbSet<InsuranceView> InsuranceViews { get; set; }
-        public virtual DbSet<LicenceView> LicenceViews { get; set; }
+        public virtual DbSet<LicenseView> LicenseViews { get; set; }
         public virtual DbSet<RatingTrailerView> RatingTrailerViews { get; set; }
         public virtual DbSet<RatingVehicleView> RatingVehicleViews { get; set; }
         public virtual DbSet<RegTrailerView> RegTrailerViews { get; set; }
-        public virtual DbSet<RegVehicleView> RegVehicleViews { get; set; }
+        public virtual DbSet<RegVehicleVIew> RegVehicleVIews { get; set; }
     }
 }
