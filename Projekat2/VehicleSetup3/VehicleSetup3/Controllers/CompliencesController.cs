@@ -116,7 +116,7 @@ namespace VehicleSetup3.Controllers
                 return RedirectToAction("Index");
             }
 
-            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.TypeID);
+            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
             return View(complience);
@@ -134,7 +134,7 @@ namespace VehicleSetup3.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.TypeID);
+            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
             return View(complience);
@@ -153,7 +153,7 @@ namespace VehicleSetup3.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.TypeID);
+            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
             return View(complience);
