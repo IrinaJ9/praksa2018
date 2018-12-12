@@ -13,10 +13,10 @@ namespace VehicleSetup3.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class VehicleSetupEntities : DbContext
+    public partial class Entities : DbContext
     {
-        public VehicleSetupEntities()
-            : base("name=VehicleSetupEntities")
+        public Entities()
+            : base("name=Entities")
         {
         }
     
@@ -37,17 +37,5 @@ namespace VehicleSetup3.Models
         public virtual DbSet<FleetAssetMake> FleetAssetMakes { get; set; }
         public virtual DbSet<FleetAssetModel> FleetAssetModels { get; set; }
         public virtual DbSet<FuelType> FuelTypes { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<AccredDriverView> AccredDriverViews { get; set; }
-        public virtual DbSet<AccredSubcontView> AccredSubcontViews { get; set; }
-        public virtual DbSet<AccredTrailerView> AccredTrailerViews { get; set; }
-        public virtual DbSet<InductionDriverView> InductionDriverViews { get; set; }
-        public virtual DbSet<InductionSubcontractorView> InductionSubcontractorViews { get; set; }
-        public virtual DbSet<InsuranceView> InsuranceViews { get; set; }
-        public virtual DbSet<LicenseView> LicenseViews { get; set; }
-        public virtual DbSet<RatingTrailerView> RatingTrailerViews { get; set; }
-        public virtual DbSet<RatingVehicleView> RatingVehicleViews { get; set; }
-        public virtual DbSet<RegTrailerView> RegTrailerViews { get; set; }
-        public virtual DbSet<RegVehicleVIew> RegVehicleVIews { get; set; }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="VehicleSetupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="VehicleSetupModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="AdditionalFields">
     <Key>
       <PropertyRef Name="ID" />
@@ -53,7 +53,7 @@
     <Property Name="Tare" Type="decimal" Precision="10" Scale="3" />
     <Property Name="GVM" Type="decimal" Precision="10" Scale="3" />
     <Property Name="GCM" Type="decimal" Precision="10" Scale="3" />
-    <Property Name="IsMainCapacity" Type="bit" />
+    <Property Name="IsMainCapacity" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Complience">
     <Key>
@@ -62,20 +62,20 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
     <Property Name="ComplienceTypeID" Type="int" Nullable="false" />
-    <Property Name="TypeID" Type="int" Nullable="false" />
+    <Property Name="SubTypeID" Type="int" Nullable="false" />
     <Property Name="LicenceClass" Type="nvarchar" MaxLength="30" />
     <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
     <Property Name="DateObtained" Type="date" />
     <Property Name="ValidFromDate" Type="date" />
     <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
+    <Property Name="AlertOperation" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="ComplienceSubType">
     <Key>
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="15" Nullable="false" />
   </EntityType>
   <EntityType Name="ComplienceType">
     <Key>
@@ -89,7 +89,7 @@
       <PropertyRef Name="FleetNo" />
     </Key>
     <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="RegistrationNo" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="RegistrationNo" Type="nvarchar" MaxLength="12" Nullable="false" />
     <Property Name="Depot" Type="nvarchar" MaxLength="20" Nullable="false" />
     <Property Name="Year" Type="nvarchar" MaxLength="4" Nullable="false" />
     <Property Name="Description" Type="nvarchar" MaxLength="100" />
@@ -123,182 +123,6 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Fuel" Type="nvarchar" MaxLength="20" Nullable="false" />
-  </EntityType>
-  <EntityType Name="sysdiagrams">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
-    <Property Name="principal_id" Type="int" Nullable="false" />
-    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="version" Type="int" />
-    <Property Name="definition" Type="varbinary(max)" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.AccredDriverView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="AccredDriverView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-    <Property Name="DateObtained" Type="date" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.AccredSubcontView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="AccredSubcontView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-    <Property Name="DateObtained" Type="date" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.AccredTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="AccredTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-    <Property Name="DateObtained" Type="date" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.InductionDriverView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="InductionDriverView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.InductionSubcontractorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="InductionSubcontractorView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.InsuranceView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="InsuranceView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="DateObtained" Type="date" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.LicenseView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="LicenseView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="LicenceClass" Type="nvarchar" MaxLength="30" />
-    <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.RatingTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="RatingTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.RatingVehicleView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="RatingVehicleView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.RegTrailerView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="RegTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-    <Property Name="DateObtained" Type="date" />
-    <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
-  </EntityType>
-  <!--Errors Found During Generation:
-warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
-  <EntityType Name="RegVehicleVIew">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="nvarchar" MaxLength="8" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="Class" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="ValidFromDate" Type="date" />
-    <Property Name="ExpiryDate" Type="date" />
-    <Property Name="AlertOperation" Type="nvarchar" MaxLength="100" />
-    <Property Name="DateObtained" Type="date" />
-    <Property Name="LicenseNo" Type="nvarchar" MaxLength="12" />
   </EntityType>
   <Association Name="FK_AdditionalFields_Details">
     <End Role="FleetAsset" Type="Self.FleetAsset" Multiplicity="1" />
@@ -356,7 +180,7 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Complience">
-        <PropertyRef Name="TypeID" />
+        <PropertyRef Name="SubTypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -469,118 +293,6 @@ warning 6002: The table/view 'VehicleSetup.dbo.RegVehicleVIew' does not have a p
     <EntitySet Name="FleetAssetMake" EntityType="Self.FleetAssetMake" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FleetAssetModel" EntityType="Self.FleetAssetModel" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="FuelType" EntityType="Self.FuelType" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="AccredDriverView" EntityType="Self.AccredDriverView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [AccredDriverView].[FleetNo] AS [FleetNo], 
-    [AccredDriverView].[Name] AS [Name], 
-    [AccredDriverView].[Class] AS [Class], 
-    [AccredDriverView].[ValidFromDate] AS [ValidFromDate], 
-    [AccredDriverView].[ExpiryDate] AS [ExpiryDate], 
-    [AccredDriverView].[AlertOperation] AS [AlertOperation], 
-    [AccredDriverView].[DateObtained] AS [DateObtained]
-    FROM [dbo].[AccredDriverView] AS [AccredDriverView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="AccredSubcontView" EntityType="Self.AccredSubcontView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [AccredSubcontView].[FleetNo] AS [FleetNo], 
-    [AccredSubcontView].[Name] AS [Name], 
-    [AccredSubcontView].[Class] AS [Class], 
-    [AccredSubcontView].[ValidFromDate] AS [ValidFromDate], 
-    [AccredSubcontView].[ExpiryDate] AS [ExpiryDate], 
-    [AccredSubcontView].[AlertOperation] AS [AlertOperation], 
-    [AccredSubcontView].[DateObtained] AS [DateObtained]
-    FROM [dbo].[AccredSubcontView] AS [AccredSubcontView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="AccredTrailerView" EntityType="Self.AccredTrailerView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [AccredTrailerView].[FleetNo] AS [FleetNo], 
-    [AccredTrailerView].[Name] AS [Name], 
-    [AccredTrailerView].[Class] AS [Class], 
-    [AccredTrailerView].[ValidFromDate] AS [ValidFromDate], 
-    [AccredTrailerView].[ExpiryDate] AS [ExpiryDate], 
-    [AccredTrailerView].[AlertOperation] AS [AlertOperation], 
-    [AccredTrailerView].[DateObtained] AS [DateObtained]
-    FROM [dbo].[AccredTrailerView] AS [AccredTrailerView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="InductionDriverView" EntityType="Self.InductionDriverView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InductionDriverView].[FleetNo] AS [FleetNo], 
-    [InductionDriverView].[Name] AS [Name], 
-    [InductionDriverView].[Class] AS [Class], 
-    [InductionDriverView].[AlertOperation] AS [AlertOperation]
-    FROM [dbo].[InductionDriverView] AS [InductionDriverView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="InductionSubcontractorView" EntityType="Self.InductionSubcontractorView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InductionSubcontractorView].[FleetNo] AS [FleetNo], 
-    [InductionSubcontractorView].[Name] AS [Name], 
-    [InductionSubcontractorView].[Class] AS [Class], 
-    [InductionSubcontractorView].[AlertOperation] AS [AlertOperation]
-    FROM [dbo].[InductionSubcontractorView] AS [InductionSubcontractorView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="InsuranceView" EntityType="Self.InsuranceView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [InsuranceView].[FleetNo] AS [FleetNo], 
-    [InsuranceView].[Name] AS [Name], 
-    [InsuranceView].[Class] AS [Class], 
-    [InsuranceView].[ValidFromDate] AS [ValidFromDate], 
-    [InsuranceView].[ExpiryDate] AS [ExpiryDate], 
-    [InsuranceView].[DateObtained] AS [DateObtained]
-    FROM [dbo].[InsuranceView] AS [InsuranceView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="LicenseView" EntityType="Self.LicenseView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [LicenseView].[FleetNo] AS [FleetNo], 
-    [LicenseView].[Name] AS [Name], 
-    [LicenseView].[Class] AS [Class], 
-    [LicenseView].[LicenceClass] AS [LicenceClass], 
-    [LicenseView].[LicenseNo] AS [LicenseNo], 
-    [LicenseView].[ValidFromDate] AS [ValidFromDate], 
-    [LicenseView].[ExpiryDate] AS [ExpiryDate], 
-    [LicenseView].[AlertOperation] AS [AlertOperation]
-    FROM [dbo].[LicenseView] AS [LicenseView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="RatingTrailerView" EntityType="Self.RatingTrailerView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [RatingTrailerView].[FleetNo] AS [FleetNo], 
-    [RatingTrailerView].[Name] AS [Name], 
-    [RatingTrailerView].[Class] AS [Class], 
-    [RatingTrailerView].[AlertOperation] AS [AlertOperation]
-    FROM [dbo].[RatingTrailerView] AS [RatingTrailerView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="RatingVehicleView" EntityType="Self.RatingVehicleView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [RatingVehicleView].[FleetNo] AS [FleetNo], 
-    [RatingVehicleView].[Name] AS [Name], 
-    [RatingVehicleView].[Class] AS [Class], 
-    [RatingVehicleView].[AlertOperation] AS [AlertOperation]
-    FROM [dbo].[RatingVehicleView] AS [RatingVehicleView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="RegTrailerView" EntityType="Self.RegTrailerView" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [RegTrailerView].[FleetNo] AS [FleetNo], 
-    [RegTrailerView].[Name] AS [Name], 
-    [RegTrailerView].[Class] AS [Class], 
-    [RegTrailerView].[ValidFromDate] AS [ValidFromDate], 
-    [RegTrailerView].[ExpiryDate] AS [ExpiryDate], 
-    [RegTrailerView].[AlertOperation] AS [AlertOperation], 
-    [RegTrailerView].[DateObtained] AS [DateObtained], 
-    [RegTrailerView].[LicenseNo] AS [LicenseNo]
-    FROM [dbo].[RegTrailerView] AS [RegTrailerView]</DefiningQuery>
-    </EntitySet>
-    <EntitySet Name="RegVehicleVIew" EntityType="Self.RegVehicleVIew" store:Type="Views" store:Schema="dbo">
-      <DefiningQuery>SELECT 
-    [RegVehicleVIew].[FleetNo] AS [FleetNo], 
-    [RegVehicleVIew].[Name] AS [Name], 
-    [RegVehicleVIew].[Class] AS [Class], 
-    [RegVehicleVIew].[ValidFromDate] AS [ValidFromDate], 
-    [RegVehicleVIew].[ExpiryDate] AS [ExpiryDate], 
-    [RegVehicleVIew].[AlertOperation] AS [AlertOperation], 
-    [RegVehicleVIew].[DateObtained] AS [DateObtained], 
-    [RegVehicleVIew].[LicenseNo] AS [LicenseNo]
-    FROM [dbo].[RegVehicleVIew] AS [RegVehicleVIew]</DefiningQuery>
-    </EntitySet>
     <AssociationSet Name="FK_AdditionalFields_Details" Association="Self.FK_AdditionalFields_Details">
       <End Role="FleetAsset" EntitySet="FleetAsset" />
       <End Role="AdditionalFields" EntitySet="AdditionalFields" />

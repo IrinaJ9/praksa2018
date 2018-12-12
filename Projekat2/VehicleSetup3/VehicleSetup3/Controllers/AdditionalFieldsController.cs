@@ -12,7 +12,7 @@ namespace VehicleSetup3.Controllers
 {
     public class AdditionalFieldsController : Controller
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
+        private Entities db = new Entities();
 
         // GET: AdditionalFields
         public ActionResult Index()

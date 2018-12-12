@@ -26,9 +26,9 @@
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Type" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IsVehicle" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="AssetSubTypes" Relationship="Self.FK_AssetSubType_AssetType" FromRole="AssetType" ToRole="AssetSubType" />
     <NavigationProperty Name="FleetAssets" Relationship="Self.FK_Details_AssetType" FromRole="AssetType" ToRole="FleetAsset" />
-    <Property Name="IsVehicle" Type="Boolean" Nullable="false" />
   </EntityType>
   <EntityType Name="Attachment">
     <Key>
@@ -59,7 +59,7 @@
     <Property Name="Tare" Type="Decimal" Precision="10" Scale="3" />
     <Property Name="GVM" Type="Decimal" Precision="10" Scale="3" />
     <Property Name="GCM" Type="Decimal" Precision="10" Scale="3" />
-    <Property Name="IsMainCapacity" Type="Boolean" />
+    <Property Name="IsMainCapacity" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="FleetAsset" Relationship="Self.FK_Capacity_Details" FromRole="Capacity" ToRole="FleetAsset" />
   </EntityType>
   <EntityType Name="Complience">
@@ -69,13 +69,13 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="FleetNo" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ComplienceTypeID" Type="Int32" Nullable="false" />
-    <Property Name="TypeID" Type="Int32" Nullable="false" />
+    <Property Name="SubTypeID" Type="Int32" Nullable="false" />
     <Property Name="LicenceClass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
     <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
     <Property Name="DateObtained" Type="DateTime" Precision="0" />
     <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
     <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AlertOperation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="ComplienceSubType" Relationship="Self.FK_Complience_ComplienceSubType" FromRole="Complience" ToRole="ComplienceSubType" />
     <NavigationProperty Name="ComplienceType" Relationship="Self.FK_Complience_ComplienceType" FromRole="Complience" ToRole="ComplienceType" />
     <NavigationProperty Name="FleetAsset" Relationship="Self.FK_Complience_Details" FromRole="Complience" ToRole="FleetAsset" />
@@ -85,7 +85,7 @@
       <PropertyRef Name="ID" />
     </Key>
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="15" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="Compliences" Relationship="Self.FK_Complience_ComplienceSubType" FromRole="ComplienceSubType" ToRole="Complience" />
   </EntityType>
   <EntityType Name="ComplienceType">
@@ -101,7 +101,7 @@
       <PropertyRef Name="FleetNo" />
     </Key>
     <Property Name="FleetNo" Type="String" MaxLength="8" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="RegistrationNo" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="RegistrationNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Depot" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Year" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Description" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
@@ -149,16 +149,6 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Fuel" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="FleetAssets" Relationship="Self.FK_Details_FuelType" FromRole="FuelType" ToRole="FleetAsset" />
-  </EntityType>
-  <EntityType Name="sysdiagram">
-    <Key>
-      <PropertyRef Name="diagram_id" />
-    </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="principal_id" Type="Int32" Nullable="false" />
-    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="version" Type="Int32" />
-    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
   <Association Name="FK_AdditionalFields_Details">
     <End Role="FleetAsset" Type="Self.FleetAsset" Multiplicity="1" />
@@ -240,7 +230,7 @@
         <PropertyRef Name="ID" />
       </Principal>
       <Dependent Role="Complience">
-        <PropertyRef Name="TypeID" />
+        <PropertyRef Name="SubTypeID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -316,7 +306,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="VehicleSetupEntities" annotation:LazyLoadingEnabled="true">
+  <EntityContainer Name="Entities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="AdditionalFields" EntityType="Self.AdditionalField" />
     <EntitySet Name="AssetSubTypes" EntityType="Self.AssetSubType" />
     <EntitySet Name="AssetTypes" EntityType="Self.AssetType" />
@@ -329,7 +319,6 @@
     <EntitySet Name="FleetAssetMakes" EntityType="Self.FleetAssetMake" />
     <EntitySet Name="FleetAssetModels" EntityType="Self.FleetAssetModel" />
     <EntitySet Name="FuelTypes" EntityType="Self.FuelType" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
     <AssociationSet Name="FK_AdditionalFields_Details" Association="Self.FK_AdditionalFields_Details">
       <End Role="FleetAsset" EntitySet="FleetAssets" />
       <End Role="AdditionalFields" EntitySet="AdditionalFields" />
@@ -382,160 +371,5 @@
       <End Role="FleetAssetMake" EntitySet="FleetAssetMakes" />
       <End Role="FleetAssetModel" EntitySet="FleetAssetModels" />
     </AssociationSet>
-    <EntitySet Name="AccredDriverViews" EntityType="VehicleSetupModel.AccredDriverView" />
-    <EntitySet Name="AccredSubcontViews" EntityType="VehicleSetupModel.AccredSubcontView" />
-    <EntitySet Name="AccredTrailerViews" EntityType="VehicleSetupModel.AccredTrailerView" />
-    <EntitySet Name="InductionDriverViews" EntityType="VehicleSetupModel.InductionDriverView" />
-    <EntitySet Name="InductionSubcontractorViews" EntityType="VehicleSetupModel.InductionSubcontractorView" />
-    <EntitySet Name="InsuranceViews" EntityType="VehicleSetupModel.InsuranceView" />
-    <EntitySet Name="LicenseViews" EntityType="VehicleSetupModel.LicenseView" />
-    <EntitySet Name="RatingTrailerViews" EntityType="VehicleSetupModel.RatingTrailerView" />
-    <EntitySet Name="RatingVehicleViews" EntityType="VehicleSetupModel.RatingVehicleView" />
-    <EntitySet Name="RegTrailerViews" EntityType="VehicleSetupModel.RegTrailerView" />
-    <EntitySet Name="RegVehicleVIews" EntityType="VehicleSetupModel.RegVehicleVIew" />
   </EntityContainer>
-  <EntityType Name="AccredDriverView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-  </EntityType>
-  <EntityType Name="AccredSubcontView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-  </EntityType>
-  <EntityType Name="AccredTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-  </EntityType>
-  <EntityType Name="InductionDriverView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="InductionSubcontractorView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="InsuranceView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-  </EntityType>
-  <EntityType Name="LicenseView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="LicenceClass" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
-    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="RatingTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="RatingVehicleView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="RegTrailerView">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-  </EntityType>
-  <EntityType Name="RegVehicleVIew">
-    <Key>
-      <PropertyRef Name="FleetNo" />
-      <PropertyRef Name="Name" />
-      <PropertyRef Name="Class" />
-    </Key>
-    <Property Name="FleetNo" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="true" />
-    <Property Name="Name" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="Class" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="ValidFromDate" Type="DateTime" Precision="0" />
-    <Property Name="ExpiryDate" Type="DateTime" Precision="0" />
-    <Property Name="AlertOperation" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <Property Name="DateObtained" Type="DateTime" Precision="0" />
-    <Property Name="LicenseNo" Type="String" MaxLength="12" FixedLength="false" Unicode="true" />
-  </EntityType>
 </Schema>
