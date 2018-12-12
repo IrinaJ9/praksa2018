@@ -45,10 +45,10 @@ namespace VehicleSetup3.Models
         public virtual ICollection<Attachment> Attachments { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Capacity> Capacities { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Complience> Compliences { get; set; }
         public virtual FleetAssetMake FleetAssetMake { get; set; }
         public virtual FleetAssetModel FleetAssetModel { get; set; }
         public virtual FuelType FuelType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Complience> Compliences { get; set; }
     }
 }

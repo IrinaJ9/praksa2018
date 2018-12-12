@@ -12,7 +12,7 @@ namespace VehicleSetup3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class AccredSubcontView
+    public partial class RegVehicleView1
     {
         public string FleetNo { get; set; }
         public string Name { get; set; }
@@ -21,6 +21,7 @@ namespace VehicleSetup3.Models
         public Nullable<System.DateTime> ExpiryDate { get; set; }
         public string AlertOperation { get; set; }
         public Nullable<System.DateTime> DateObtained { get; set; }
+        public string LicenseNo { get; set; }
         public int ID { get; set; }
     }
 }

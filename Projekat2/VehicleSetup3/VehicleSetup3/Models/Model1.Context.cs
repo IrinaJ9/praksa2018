@@ -30,7 +30,6 @@ namespace VehicleSetup3.Models
         public virtual DbSet<AssetType> AssetTypes { get; set; }
         public virtual DbSet<Attachment> Attachments { get; set; }
         public virtual DbSet<Capacity> Capacities { get; set; }
-        public virtual DbSet<Complience> Compliences { get; set; }
         public virtual DbSet<ComplienceSubType> ComplienceSubTypes { get; set; }
         public virtual DbSet<ComplienceType> ComplienceTypes { get; set; }
         public virtual DbSet<FleetAsset> FleetAssets { get; set; }
@@ -49,5 +48,8 @@ namespace VehicleSetup3.Models
         public virtual DbSet<RatingVehicleView> RatingVehicleViews { get; set; }
         public virtual DbSet<RegTrailerView> RegTrailerViews { get; set; }
         public virtual DbSet<RegVehicleVIew> RegVehicleVIews { get; set; }
+        public virtual DbSet<LicenceView> LicenceViews { get; set; }
+        public virtual DbSet<RegVehicleView1> RegVehicleView1 { get; set; }
+        public virtual DbSet<Complience> Compliences { get; set; }
     }
 }

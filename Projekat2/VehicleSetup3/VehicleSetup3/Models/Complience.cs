@@ -17,7 +17,7 @@ namespace VehicleSetup3.Models
         public int ID { get; set; }
         public string FleetNo { get; set; }
         public int ComplienceTypeID { get; set; }
-        public int TypeID { get; set; }
+        public int SubTypeID { get; set; }
         public string LicenceClass { get; set; }
         public string LicenseNo { get; set; }
         public Nullable<System.DateTime> DateObtained { get; set; }
