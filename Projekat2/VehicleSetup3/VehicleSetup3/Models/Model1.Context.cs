@@ -49,7 +49,6 @@ namespace VehicleSetup3.Models
         public virtual DbSet<RegTrailerView> RegTrailerViews { get; set; }
         public virtual DbSet<RegVehicleVIew> RegVehicleVIews { get; set; }
         public virtual DbSet<LicenceView> LicenceViews { get; set; }
-        public virtual DbSet<RegVehicleView1> RegVehicleView1 { get; set; }
         public virtual DbSet<Complience> Compliences { get; set; }
     }
 }
