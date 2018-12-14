@@ -180,6 +180,7 @@
     <Compile Include="Controllers\AssetSubTypesController.cs" />
     <Compile Include="Controllers\AssetTypesController.cs" />
     <Compile Include="Controllers\AttachmentsController.cs" />
+    <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\CapacitiesController.cs" />
     <Compile Include="Controllers\CompliencesController.cs" />
     <Compile Include="Controllers\ComplienceSubTypesController.cs" />
@@ -281,9 +282,6 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\RegVehicleVIew.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\RegVehicleView1.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\sysdiagram.cs">
@@ -439,6 +437,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
