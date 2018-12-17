@@ -52,7 +52,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,AxelWeight1,AxelWeight2,AxelWeight3,FuelTypeID")] FleetAsset fleetAsset)
+        public ActionResult Create(FleetAsset fleetAsset, Capacity capacity, AdditionalField additionalField, Attachment attachment, Complience complience)
         {
             if (ModelState.IsValid)
             {
