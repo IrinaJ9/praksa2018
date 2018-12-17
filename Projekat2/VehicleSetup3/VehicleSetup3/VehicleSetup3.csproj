@@ -218,6 +218,7 @@
     <Compile Include="Models\Capacity.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FleetAssetBig.cs" />
     <Compile Include="Models\Complience.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -428,6 +429,7 @@
     <Content Include="Views\Compliences\RatingTrailerView.cshtml" />
     <Content Include="Views\Compliences\InductionDriverView.cshtml" />
     <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
+    <Content Include="Views\FleetAssets\Create3.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -44,6 +44,10 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer");
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name");
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel");
+            ViewBag.Capacity = db.Capacities;
+            ViewBag.AdditionalFields = db.AdditionalFields;
+            ViewBag.Attachments = db.Attachments;
+            ViewBag.Compliences = db.Compliences;
             return View();
         }
 
