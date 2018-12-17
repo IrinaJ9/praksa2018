@@ -102,7 +102,6 @@ C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetu
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\obj\Debug\VehicleSetup3.csprojAssemblyReference.cache
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\obj\Debug\VehicleSetup3.csproj.CoreCompileInputs.cache
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\obj\Debug\VehicleSetup3.csproj.CopyComplete
 C:\Users\Toshiba\Desktop\Projekat\praksa2018\Projekat2\VehicleSetup3\VehicleSetup3\obj\Debug\VehicleSetup3.dll

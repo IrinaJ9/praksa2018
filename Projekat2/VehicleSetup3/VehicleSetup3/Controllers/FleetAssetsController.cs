@@ -10,8 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class FleetAssetsController : BaseController
+    public class FleetAssetsController : Controller
     {
+        private Entities db = new Entities();
 
         // GET: FleetAssets
         public ActionResult Index()
@@ -51,7 +52,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,AxelWeight1,AxelWeight2,AxelWeight3,FuelTypeID")] FleetAsset fleetAsset)
+        public ActionResult Create([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,FuelTypeID")] FleetAsset fleetAsset)
         {
             if (ModelState.IsValid)
             {
@@ -93,7 +94,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,AxelWeight1,AxelWeight2,AxelWeight3,FuelTypeID")] FleetAsset fleetAsset)
+        public ActionResult Edit([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,FuelTypeID")] FleetAsset fleetAsset)
         {
             if (ModelState.IsValid)
             {
