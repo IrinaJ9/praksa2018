@@ -25,7 +25,10 @@ namespace VehicleSetup3.Models
         public Nullable<decimal> Tare { get; set; }
         public Nullable<decimal> GVM { get; set; }
         public Nullable<decimal> GCM { get; set; }
-        public Nullable<bool> IsMainCapacity { get; set; }
+        public bool IsMainCapacity { get; set; }
+        public Nullable<decimal> AxelWeight1 { get; set; }
+        public Nullable<decimal> AxelWeight2 { get; set; }
+        public Nullable<decimal> AxelWeight3 { get; set; }
     
         public virtual FleetAsset FleetAsset { get; set; }
     }

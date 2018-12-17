@@ -12,7 +12,7 @@ namespace VehicleSetup3.Models
     using System;
     using System.Collections.Generic;
     
-    public partial class RegVehicleVIew
+    public partial class RegVehicleView
     {
         public string FleetNo { get; set; }
         public string Name { get; set; }

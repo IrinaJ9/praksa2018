@@ -4,19 +4,19 @@
     <EntitySetMapping Name="AdditionalFields">
       <EntityTypeMapping TypeName="VehicleSetupModel.AdditionalField">
         <MappingFragment StoreEntitySet="AdditionalFields">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AssetSubTypes">
       <EntityTypeMapping TypeName="VehicleSetupModel.AssetSubType">
         <MappingFragment StoreEntitySet="AssetSubType">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="SubType" ColumnName="SubType" />
           <ScalarProperty Name="AssetTypeID" ColumnName="AssetTypeID" />
+          <ScalarProperty Name="SubType" ColumnName="SubType" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -24,146 +24,136 @@
       <EntityTypeMapping TypeName="VehicleSetupModel.AssetType">
         <MappingFragment StoreEntitySet="AssetType">
           <ScalarProperty Name="IsVehicle" ColumnName="IsVehicle" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Attachments">
       <EntityTypeMapping TypeName="VehicleSetupModel.Attachment">
         <MappingFragment StoreEntitySet="Attachments">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Extension" ColumnName="Extension" />
-          <ScalarProperty Name="Size" ColumnName="Size" />
-          <ScalarProperty Name="Path" ColumnName="Path" />
-          <ScalarProperty Name="Image" ColumnName="Image" />
           <ScalarProperty Name="IsDefaultImage" ColumnName="IsDefaultImage" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Path" ColumnName="Path" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Extension" ColumnName="Extension" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Capacities">
       <EntityTypeMapping TypeName="VehicleSetupModel.Capacity">
         <MappingFragment StoreEntitySet="Capacity">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
-          <ScalarProperty Name="Pallets" ColumnName="Pallets" />
-          <ScalarProperty Name="Spaces" ColumnName="Spaces" />
-          <ScalarProperty Name="CubicSpace" ColumnName="CubicSpace" />
-          <ScalarProperty Name="InternalHeight" ColumnName="InternalHeight" />
-          <ScalarProperty Name="InternalWidht" ColumnName="InternalWidht" />
-          <ScalarProperty Name="InternalLenght" ColumnName="InternalLenght" />
-          <ScalarProperty Name="Tare" ColumnName="Tare" />
-          <ScalarProperty Name="GVM" ColumnName="GVM" />
-          <ScalarProperty Name="GCM" ColumnName="GCM" />
+          <ScalarProperty Name="AxelWeight3" ColumnName="AxelWeight3" />
+          <ScalarProperty Name="AxelWeight2" ColumnName="AxelWeight2" />
+          <ScalarProperty Name="AxelWeight1" ColumnName="AxelWeight1" />
           <ScalarProperty Name="IsMainCapacity" ColumnName="IsMainCapacity" />
+          <ScalarProperty Name="GCM" ColumnName="GCM" />
+          <ScalarProperty Name="GVM" ColumnName="GVM" />
+          <ScalarProperty Name="Tare" ColumnName="Tare" />
+          <ScalarProperty Name="InternalLenght" ColumnName="InternalLenght" />
+          <ScalarProperty Name="InternalWidht" ColumnName="InternalWidht" />
+          <ScalarProperty Name="InternalHeight" ColumnName="InternalHeight" />
+          <ScalarProperty Name="CubicSpace" ColumnName="CubicSpace" />
+          <ScalarProperty Name="Spaces" ColumnName="Spaces" />
+          <ScalarProperty Name="Pallets" ColumnName="Pallets" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Compliences">
       <EntityTypeMapping TypeName="VehicleSetupModel.Complience">
         <MappingFragment StoreEntitySet="Complience">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
-          <ScalarProperty Name="ComplienceTypeID" ColumnName="ComplienceTypeID" />
-          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
-          <ScalarProperty Name="LicenceClass" ColumnName="LicenceClass" />
-          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
-          <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
-          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
-          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
+          <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
+          <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
+          <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
+          <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
+          <ScalarProperty Name="LicenceClass" ColumnName="LicenceClass" />
+          <ScalarProperty Name="SubTypeID" ColumnName="SubTypeID" />
+          <ScalarProperty Name="ComplienceTypeID" ColumnName="ComplienceTypeID" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ComplienceSubTypes">
       <EntityTypeMapping TypeName="VehicleSetupModel.ComplienceSubType">
         <MappingFragment StoreEntitySet="ComplienceSubType">
-          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ComplienceTypes">
       <EntityTypeMapping TypeName="VehicleSetupModel.ComplienceType">
         <MappingFragment StoreEntitySet="ComplienceType">
-          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Class" ColumnName="Class" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FleetAssets">
       <EntityTypeMapping TypeName="VehicleSetupModel.FleetAsset">
         <MappingFragment StoreEntitySet="FleetAsset">
-          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
-          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
-          <ScalarProperty Name="Depot" ColumnName="Depot" />
-          <ScalarProperty Name="Year" ColumnName="Year" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="FleetAssetMakeID" ColumnName="FleetAssetMakeID" />
-          <ScalarProperty Name="FleetAssetModelID" ColumnName="FleetAssetModelID" />
-          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
-          <ScalarProperty Name="SubTypeID" ColumnName="SubTypeID" />
-          <ScalarProperty Name="AxelWeight1" ColumnName="AxelWeight1" />
-          <ScalarProperty Name="AxelWeight2" ColumnName="AxelWeight2" />
-          <ScalarProperty Name="AxelWeight3" ColumnName="AxelWeight3" />
           <ScalarProperty Name="FuelTypeID" ColumnName="FuelTypeID" />
+          <ScalarProperty Name="SubTypeID" ColumnName="SubTypeID" />
+          <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+          <ScalarProperty Name="FleetAssetModelID" ColumnName="FleetAssetModelID" />
+          <ScalarProperty Name="FleetAssetMakeID" ColumnName="FleetAssetMakeID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Depot" ColumnName="Depot" />
+          <ScalarProperty Name="RegistrationNo" ColumnName="RegistrationNo" />
+          <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FleetAssetMakes">
       <EntityTypeMapping TypeName="VehicleSetupModel.FleetAssetMake">
         <MappingFragment StoreEntitySet="FleetAssetMake">
-          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Manufacturer" ColumnName="Manufacturer" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FleetAssetModels">
       <EntityTypeMapping TypeName="VehicleSetupModel.FleetAssetModel">
         <MappingFragment StoreEntitySet="FleetAssetModel">
-          <ScalarProperty Name="ID" ColumnName="ID" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
           <ScalarProperty Name="FleetAssetMakeID" ColumnName="FleetAssetMakeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FuelTypes">
       <EntityTypeMapping TypeName="VehicleSetupModel.FuelType">
         <MappingFragment StoreEntitySet="FuelType">
-          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="Fuel" ColumnName="Fuel" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="VehicleSetupModel.sysdiagram">
-        <MappingFragment StoreEntitySet="sysdiagrams">
-          <ScalarProperty Name="name" ColumnName="name" />
-          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-          <ScalarProperty Name="version" ColumnName="version" />
-          <ScalarProperty Name="definition" ColumnName="definition" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AccredDriverViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.AccredDriverView">
         <MappingFragment StoreEntitySet="AccredDriverView">
-          <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
-          <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
           <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
-          <ScalarProperty Name="Class" ColumnName="Class" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="FleetNo" ColumnName="FleetNo" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Class" ColumnName="Class" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="AccredSubcontViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.AccredSubcontView">
         <MappingFragment StoreEntitySet="AccredSubcontView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -177,6 +167,7 @@
     <EntitySetMapping Name="AccredTrailerViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.AccredTrailerView">
         <MappingFragment StoreEntitySet="AccredTrailerView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
@@ -190,6 +181,7 @@
     <EntitySetMapping Name="InductionDriverViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.InductionDriverView">
         <MappingFragment StoreEntitySet="InductionDriverView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="Class" ColumnName="Class" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -200,6 +192,7 @@
     <EntitySetMapping Name="InductionSubcontractorViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.InductionSubcontractorView">
         <MappingFragment StoreEntitySet="InductionSubcontractorView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="Class" ColumnName="Class" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -210,6 +203,7 @@
     <EntitySetMapping Name="InsuranceViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.InsuranceView">
         <MappingFragment StoreEntitySet="InsuranceView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
           <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
@@ -219,9 +213,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="LicenseViews">
-      <EntityTypeMapping TypeName="VehicleSetupModel.LicenseView">
-        <MappingFragment StoreEntitySet="LicenseView">
+    <EntitySetMapping Name="LicenceViews">
+      <EntityTypeMapping TypeName="VehicleSetupModel.LicenceView">
+        <MappingFragment StoreEntitySet="LicenceView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="ExpiryDate" ColumnName="ExpiryDate" />
           <ScalarProperty Name="ValidFromDate" ColumnName="ValidFromDate" />
@@ -236,6 +231,7 @@
     <EntitySetMapping Name="RatingTrailerViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.RatingTrailerView">
         <MappingFragment StoreEntitySet="RatingTrailerView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="Class" ColumnName="Class" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -246,6 +242,7 @@
     <EntitySetMapping Name="RatingVehicleViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.RatingVehicleView">
         <MappingFragment StoreEntitySet="RatingVehicleView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
           <ScalarProperty Name="Class" ColumnName="Class" />
           <ScalarProperty Name="Name" ColumnName="Name" />
@@ -256,6 +253,7 @@
     <EntitySetMapping Name="RegTrailerViews">
       <EntityTypeMapping TypeName="VehicleSetupModel.RegTrailerView">
         <MappingFragment StoreEntitySet="RegTrailerView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
           <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />
@@ -267,9 +265,10 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="RegVehicleVIews">
-      <EntityTypeMapping TypeName="VehicleSetupModel.RegVehicleVIew">
-        <MappingFragment StoreEntitySet="RegVehicleVIew">
+    <EntitySetMapping Name="RegVehicleViews">
+      <EntityTypeMapping TypeName="VehicleSetupModel.RegVehicleView">
+        <MappingFragment StoreEntitySet="RegVehicleView">
+          <ScalarProperty Name="ID" ColumnName="ID" />
           <ScalarProperty Name="LicenseNo" ColumnName="LicenseNo" />
           <ScalarProperty Name="DateObtained" ColumnName="DateObtained" />
           <ScalarProperty Name="AlertOperation" ColumnName="AlertOperation" />

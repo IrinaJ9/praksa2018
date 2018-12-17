@@ -23,7 +23,7 @@ namespace VehicleSetup3.Controllers
         #region views
         public ActionResult License()
         {
-            var license = db.LicenseViews;
+            var license = db.LicenceViews;
             return View(license.ToList());
         }
         public ActionResult Insurance()
@@ -69,7 +69,7 @@ namespace VehicleSetup3.Controllers
         }
         public ActionResult RegVehicle()
         {
-            var regVeh = db.RegVehicleVIews;
+            var regVeh = db.RegVehicleViews;
             return View("RegistrationVehicleView", regVeh.ToList());
         }
         public ActionResult RegTrailer()
