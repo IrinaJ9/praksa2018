@@ -29,13 +29,13 @@ namespace VehicleSetup3.Models
         public virtual DbSet<AssetSubType> AssetSubTypes { get; set; }
         public virtual DbSet<AssetType> AssetTypes { get; set; }
         public virtual DbSet<Attachment> Attachments { get; set; }
-        public virtual DbSet<Capacity> Capacities { get; set; }
         public virtual DbSet<Complience> Compliences { get; set; }
         public virtual DbSet<ComplienceSubType> ComplienceSubTypes { get; set; }
         public virtual DbSet<ComplienceType> ComplienceTypes { get; set; }
-        public virtual DbSet<FleetAsset> FleetAssets { get; set; }
         public virtual DbSet<FleetAssetMake> FleetAssetMakes { get; set; }
         public virtual DbSet<FleetAssetModel> FleetAssetModels { get; set; }
         public virtual DbSet<FuelType> FuelTypes { get; set; }
+        public virtual DbSet<Capacity> Capacities { get; set; }
+        public virtual DbSet<FleetAsset> FleetAssets { get; set; }
     }
 }

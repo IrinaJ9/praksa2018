@@ -32,9 +32,6 @@ namespace VehicleSetup3.Models
         public int FleetAssetModelID { get; set; }
         public int TypeID { get; set; }
         public int SubTypeID { get; set; }
-        public Nullable<decimal> AxelWeight1 { get; set; }
-        public Nullable<decimal> AxelWeight2 { get; set; }
-        public Nullable<decimal> AxelWeight3 { get; set; }
         public int FuelTypeID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

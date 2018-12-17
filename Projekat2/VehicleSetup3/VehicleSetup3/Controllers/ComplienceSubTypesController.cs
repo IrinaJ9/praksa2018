@@ -10,9 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class ComplienceSubTypesController : Controller
+    public class ComplienceSubTypesController : BaseController
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
+        
 
         // GET: ComplienceSubTypes
         public ActionResult Index()

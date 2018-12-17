@@ -210,6 +210,7 @@
     <Compile Include="Models\Capacity.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Class1.cs" />
     <Compile Include="Models\Complience.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -252,6 +253,7 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-spacelab.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -338,7 +340,6 @@
     <Content Include="Views\FleetAssets\Delete.cshtml" />
     <Content Include="Views\FleetAssets\Details.cshtml" />
     <Content Include="Views\FleetAssets\Edit.cshtml" />
-    <Content Include="Views\FleetAssets\Index.cshtml" />
     <Content Include="Views\FuelTypes\Create.cshtml" />
     <Content Include="Views\FuelTypes\Delete.cshtml" />
     <Content Include="Views\FuelTypes\Details.cshtml" />
@@ -395,6 +396,7 @@
     <Content Include="Views\Compliences\RatingTrailerView.cshtml" />
     <Content Include="Views\Compliences\InductionDriverView.cshtml" />
     <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
+    <Content Include="Views\FleetAssets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

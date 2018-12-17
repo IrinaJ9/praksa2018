@@ -10,9 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class AssetSubTypesController : Controller
+    public class AssetSubTypesController : BaseController
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
+       
 
         // GET: AssetSubTypes
         public ActionResult Index()

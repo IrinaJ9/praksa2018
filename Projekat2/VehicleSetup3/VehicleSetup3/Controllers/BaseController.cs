@@ -10,9 +10,9 @@ namespace VehicleSetup3.Controllers
     public class BaseController : Controller
     {
         public Entities db = new Entities();
-        public ActionResult Index()
-        {
-            return View();
-        }
+        //public ActionResult Index()
+        //{
+        //    return View();
+        //}
     }
 }

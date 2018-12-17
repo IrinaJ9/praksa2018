@@ -10,9 +10,8 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class FuelTypesController : Controller
+    public class FuelTypesController : BaseController
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: FuelTypes
         public ActionResult Index()

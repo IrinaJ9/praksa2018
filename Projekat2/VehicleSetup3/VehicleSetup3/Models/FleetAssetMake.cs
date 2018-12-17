@@ -17,16 +17,16 @@ namespace VehicleSetup3.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FleetAssetMake()
         {
-            this.FleetAssets = new HashSet<FleetAsset>();
             this.FleetAssetModels = new HashSet<FleetAssetModel>();
+            this.FleetAssets = new HashSet<FleetAsset>();
         }
     
         public int ID { get; set; }
         public string Manufacturer { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FleetAsset> FleetAssets { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FleetAssetModel> FleetAssetModels { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FleetAsset> FleetAssets { get; set; }
     }
 }

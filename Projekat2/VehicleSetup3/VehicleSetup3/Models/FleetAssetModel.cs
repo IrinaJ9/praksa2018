@@ -24,8 +24,8 @@ namespace VehicleSetup3.Models
         public string Name { get; set; }
         public int FleetAssetMakeID { get; set; }
     
+        public virtual FleetAssetMake FleetAssetMake { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<FleetAsset> FleetAssets { get; set; }
-        public virtual FleetAssetMake FleetAssetMake { get; set; }
     }
 }

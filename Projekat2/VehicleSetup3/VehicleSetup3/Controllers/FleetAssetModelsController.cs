@@ -10,9 +10,8 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class FleetAssetModelsController : Controller
+    public class FleetAssetModelsController : BaseController
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: FleetAssetModels
         public ActionResult Index()

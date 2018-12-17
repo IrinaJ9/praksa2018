@@ -5,7 +5,10 @@ using System.Web;
 
 namespace VehicleSetup3.Models
 {
-    public class Class1
+    public class FleetAssetView
+
     {
+
+
     }
 }

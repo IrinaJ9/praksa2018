@@ -54,6 +54,9 @@
     <Property Name="GVM" Type="decimal" Precision="10" Scale="3" />
     <Property Name="GCM" Type="decimal" Precision="10" Scale="3" />
     <Property Name="IsMainCapacity" Type="bit" Nullable="false" />
+    <Property Name="AxelWeight1" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight2" Type="decimal" Precision="10" Scale="3" />
+    <Property Name="AxelWeight3" Type="decimal" Precision="10" Scale="3" />
   </EntityType>
   <EntityType Name="Complience">
     <Key>
@@ -97,9 +100,6 @@
     <Property Name="FleetAssetModelID" Type="int" Nullable="false" />
     <Property Name="TypeID" Type="int" Nullable="false" />
     <Property Name="SubTypeID" Type="int" Nullable="false" />
-    <Property Name="AxelWeight1" Type="decimal" Precision="10" Scale="3" />
-    <Property Name="AxelWeight2" Type="decimal" Precision="10" Scale="3" />
-    <Property Name="AxelWeight3" Type="decimal" Precision="10" Scale="3" />
     <Property Name="FuelTypeID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="FleetAssetMake">

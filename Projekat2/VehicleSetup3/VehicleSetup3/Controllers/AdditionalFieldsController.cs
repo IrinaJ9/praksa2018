@@ -10,9 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class AdditionalFieldsController : Controller
+    public class AdditionalFieldsController : BaseController
     {
-        private Entities db = new Entities();
+       
 
         // GET: AdditionalFields
         public ActionResult Index()

@@ -10,9 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class AttachmentsController : Controller
+    public class AttachmentsController : BaseController
     {
-        private VehicleSetupEntities db = new VehicleSetupEntities();
+       
 
         // GET: Attachments
         public ActionResult Index()
