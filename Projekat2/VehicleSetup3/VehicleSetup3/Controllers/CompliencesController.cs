@@ -21,10 +21,10 @@ namespace VehicleSetup3.Controllers
             return View(compliences.ToList());
         }
         #region views
-        public ActionResult License()
+        public ActionResult Licence()
         {
-            var license = db.LicenceViews;
-            return View(license.ToList());
+            var licence = db.LicenceViews;
+            return View(licence.ToList());
         }
         public ActionResult Insurance()
         {
@@ -106,20 +106,19 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FleetNo,ComplienceTypeID,TypeID,LicenceClass,LicenseNo,DateObtained,ValidFromDate,ExpiryDate,AlertOperation")] Complience complience)
+        public JsonResult Create( Complience complience)
         {
             if (ModelState.IsValid)
             {
                 db.Compliences.Add(complience);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
-            return View(complience);
+            return Json(complience);
         }
 
         // GET: Compliences/Edit/5

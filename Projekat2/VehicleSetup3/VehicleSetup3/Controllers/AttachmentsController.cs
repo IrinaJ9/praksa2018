@@ -47,18 +47,17 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FleetNo,Name,Extension,Size,Path,Image,IsDefaultImage")] Attachment attachment)
+        public JsonResult Create(Attachment attachment)
         {
             if (ModelState.IsValid)
             {
                 db.Attachments.Add(attachment);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", attachment.FleetNo);
-            return View(attachment);
+            return Json(attachment);
         }
 
         // GET: Attachments/Edit/5

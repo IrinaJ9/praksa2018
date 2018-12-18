@@ -418,7 +418,7 @@
     <Content Include="Views\AdditionalFields\Details.cshtml" />
     <Content Include="Views\AdditionalFields\Edit.cshtml" />
     <Content Include="Views\AdditionalFields\Index.cshtml" />
-    <Content Include="Views\Compliences\License.cshtml" />
+    <Content Include="Views\Compliences\Licence.cshtml" />
     <Content Include="Views\Compliences\Insurance.cshtml" />
     <Content Include="Views\Compliences\RegistrationVehicleView.cshtml" />
     <Content Include="Views\Compliences\RegistrationTrailerView.cshtml" />
@@ -430,6 +430,7 @@
     <Content Include="Views\Compliences\InductionDriverView.cshtml" />
     <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
     <Content Include="Views\FleetAssets\Create3.cshtml" />
+    <Content Include="Views\FleetAssets\Create5.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

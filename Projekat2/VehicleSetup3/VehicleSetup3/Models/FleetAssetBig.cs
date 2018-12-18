@@ -7,6 +7,16 @@ namespace VehicleSetup3.Models
 {
     public class FleetAssetBig
     {
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public FleetAssetBig()
+        {
+            this.AdditionalFields = new HashSet<AdditionalField>();
+            this.Capacities = new HashSet<Capacity>();
+            this.Compliences = new HashSet<Complience>();
+        }
+        #region Fields
+    //  FleetAsset
         public string FleetNo { get; set; }
         public string RegistrationNo { get; set; }
         public string Depot { get; set; }
@@ -17,7 +27,9 @@ namespace VehicleSetup3.Models
         public int FleetAssetTypeID { get; set; }
         public int FleetAssetSubTypeID { get; set; }
         public int FuelTypeID { get; set; }
-        public int ID { get; set; }
+    //---------------------------------------------------
+
+    //  Capacities
         public int? Pallets { get; set; }
         public int? Spaces { get; set; }
         public decimal? CubicSpace { get; set; }
@@ -31,6 +43,8 @@ namespace VehicleSetup3.Models
         public decimal? AxelWeight1 { get; set; }
         public decimal? AxelWeight2 { get; set; }
         public decimal? AxelWeight3 { get; set; }
+    //---------------------------------------------------
+    //  Complineces
         public int ComplienceTypeID { get; set; }
         public int ComplienceSubTypeID { get; set; }
         public string LicenceClass { get; set; }
@@ -39,12 +53,31 @@ namespace VehicleSetup3.Models
         public DateTime? ValidFromDate { get; set; }
         public DateTime? ExpiryDate { get; set; }
         public string AlertOperation { get; set; }
-        public string Name { get; set; }
-        public string Extension { get; set; }
-        public string Size { get; set; }
-        public string Path { get; set; }
-        public byte[] Image { get; set; }
-        public bool IsDefaultImage { get; set; }
+        //---------------------------------------------------
+        //  AdditionalFields
+        public string AdditionalFieldName { get; set; }
+        public string AdditionalFieldValue { get; set; }
+        //---------------------------------------------------
 
+        #endregion
+
+        #region Virtual things???
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<AdditionalField> AdditionalFields { get; set; }
+        public virtual AssetSubType AssetSubType { get; set; }
+        public virtual AssetType AssetType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Attachment> Attachments { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Capacity> Capacities { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Complience> Compliences { get; set; }
+        public virtual FleetAssetMake FleetAssetMake { get; set; }
+        public virtual FleetAssetModel FleetAssetModel { get; set; }
+        public virtual FuelType FuelType { get; set; }
+        public virtual FleetAsset FleetAsset { get; set; }
+        public virtual ComplienceSubType ComplienceSubType { get; set; }
+        public virtual ComplienceType ComplienceType { get; set; }
+        #endregion
     }
 }

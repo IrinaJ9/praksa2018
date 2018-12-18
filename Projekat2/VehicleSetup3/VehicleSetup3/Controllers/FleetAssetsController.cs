@@ -37,6 +37,20 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: FleetAssets/Create
+        //public ActionResult Create()
+        //{
+        //    ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType");
+        //    ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type");
+        //    ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer");
+        //    ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name");
+        //    ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel");
+        //    ViewBag.Capacity = db.Capacities;
+        //    ViewBag.AdditionalFields = db.AdditionalFields;
+        //    ViewBag.Attachments = db.Attachments;
+        //    ViewBag.Compliences = db.Compliences;
+        //    return View();
+        //}
+
         public ActionResult Create()
         {
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType");
@@ -44,25 +58,23 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer");
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name");
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel");
-            ViewBag.Capacity = db.Capacities;
-            ViewBag.AdditionalFields = db.AdditionalFields;
-            ViewBag.Attachments = db.Attachments;
-            ViewBag.Compliences = db.Compliences;
-            return View();
+            ViewBag.ComplienceSubTypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
+            ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class");
+            var fab = new FleetAssetBig();
+            return View("Create5", fab);
         }
 
         // POST: FleetAssets/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create(FleetAsset fleetAsset, Capacity capacity, AdditionalField additionalField, Attachment attachment, Complience complience)
+        public JsonResult Create(FleetAsset fleetAsset)
         {
             if (ModelState.IsValid)
             {
                 db.FleetAssets.Add(fleetAsset);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
@@ -70,7 +82,7 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return View(fleetAsset);
+            return Json(fleetAsset);
         }
 
         // GET: FleetAssets/Edit/5

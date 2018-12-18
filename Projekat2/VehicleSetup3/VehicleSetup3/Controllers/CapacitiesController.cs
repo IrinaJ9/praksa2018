@@ -47,18 +47,17 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FleetNo,Pallets,Spaces,CubicSpace,InternalHeight,InternalWidht,InternalLenght,Tare,GVM,GCM,IsMainCapacity")] Capacity capacity)
+        public JsonResult Create(Capacity capacity)
         {
             if (ModelState.IsValid)
             {
                 db.Capacities.Add(capacity);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", capacity.FleetNo);
-            return View(capacity);
+            return Json(capacity);
         }
 
         // GET: Capacities/Edit/5
