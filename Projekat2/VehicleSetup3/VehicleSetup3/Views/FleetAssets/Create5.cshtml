@@ -317,9 +317,9 @@
             //FleetAsset
             $('#Save').click(function () {
                 $.ajax({
-                    url: '/FleetAssets/Create',
+                    url: '/fleetAssets/Create',
                     type: 'POST',
-                    datatype: JSON,
+                    datatype: 'json',
                     data: {
                         FleetNo: $('#FleetNo').val(),
                         RegistrationNo: $('#RegistrationNo').val(),
@@ -328,8 +328,8 @@
                         Description: $('#Description').val(),
                         FleetAssetMakeID: $('#FleetAssetMakeID').val(),
                         FleetAssetModelID: $('#FleetAssetModelID').val(),
-                        TypeID: $('#FleetAssetTypeID').val(),
-                        SubTypeID: $('#FleetAssetSubTypeID').val(),
+                        TypeID: $('#TypeID').val(),
+                        SubTypeID: $('#SubTypeID').val(),
                         FuelTypeID: $('#FuelTypeID').val(),
                     },
                     success: function (data, status, xhr) {
@@ -338,7 +338,7 @@
                             $.ajax({
                                 url: '/Capacities/Create',
                                 type: 'POST',
-                                datatype: JSON,
+                                datatype: 'json',
                                 data: {
                                     FleetNo: $('#FleetNo').val(),
                                     Pallets: $('#Pallets').val(),
@@ -364,9 +364,9 @@
                             })
                             //Compliences
                             $.ajax({
-                                url: '/Complineces/Create',
+                                url: '/Compliences/Create',
                                 type: 'POST',
-                                datatype: JSON,
+                                datatype: 'json',
                                 data: {
                                     FleetNo: $('#FleetNo').val(),
                                     ComplienceTypeID: $('#ComplienceTypeID').val(),
@@ -389,7 +389,7 @@
                             $.ajax({
                                 url: '/AdditionalFields/Create',
                                 type: 'POST',
-                                datatype: JSON,
+                                datatype: 'json',
                                 data: {
                                     FleetNo: $('#FleetNo').val(),
                                     Name: $('#AdditionalFieldsName').val(),

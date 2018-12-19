@@ -11,6 +11,8 @@ namespace VehicleSetup3.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public FleetAssetBig()
         {
+
+            this.FleetAssets = new HashSet<FleetAsset>();
             this.AdditionalFields = new HashSet<AdditionalField>();
             this.Capacities = new HashSet<Capacity>();
             this.Compliences = new HashSet<Complience>();
@@ -61,7 +63,7 @@ namespace VehicleSetup3.Models
 
         #endregion
 
-        #region Virtual things???
+        #region Virtual
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<AdditionalField> AdditionalFields { get; set; }
         public virtual AssetSubType AssetSubType { get; set; }
@@ -78,6 +80,8 @@ namespace VehicleSetup3.Models
         public virtual FleetAsset FleetAsset { get; set; }
         public virtual ComplienceSubType ComplienceSubType { get; set; }
         public virtual ComplienceType ComplienceType { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FleetAsset> FleetAssets { get; set; }
         #endregion
     }
 }

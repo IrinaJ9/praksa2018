@@ -48,7 +48,5 @@ namespace VehicleSetup3.Models
         public virtual DbSet<RatingVehicleView> RatingVehicleViews { get; set; }
         public virtual DbSet<RegTrailerView> RegTrailerViews { get; set; }
         public virtual DbSet<RegVehicleView> RegVehicleViews { get; set; }
-
-        public System.Data.Entity.DbSet<VehicleSetup3.Models.FleetAssetBig> FleetAssetBigs { get; set; }
     }
 }
