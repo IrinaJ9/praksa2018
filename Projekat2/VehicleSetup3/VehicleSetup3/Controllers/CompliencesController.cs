@@ -20,6 +20,11 @@ namespace VehicleSetup3.Controllers
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
+        public ActionResult ComplienceTypes()
+        {
+            var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
+            return View(compliences.ToList());
+        }
         #region views
         public ActionResult Licence()
         {
