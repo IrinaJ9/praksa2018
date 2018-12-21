@@ -11,7 +11,8 @@ namespace VehicleSetup3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class LicenceView
     {
         public string FleetNo { get; set; }
@@ -19,8 +20,11 @@ namespace VehicleSetup3.Models
         public string Class { get; set; }
         public string LicenceClass { get; set; }
         public string LicenseNo { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ValidFromDate { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ExpiryDate { get; set; }
+        
         public string AlertOperation { get; set; }
         public int ID { get; set; }
     }
