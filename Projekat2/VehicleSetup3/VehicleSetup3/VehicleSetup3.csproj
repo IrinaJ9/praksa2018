@@ -432,6 +432,7 @@
     <Content Include="Views\Compliences\InductionSubcontractor.cshtml" />
     <Content Include="Views\FleetAssets\Create3.cshtml" />
     <Content Include="Views\FleetAssets\Create5.cshtml" />
+    <Content Include="Views\Compliences\ComplienceTypes.cshtml" />
     <Content Include="Views\AdditionalFields\Create6.cshtml" />
   </ItemGroup>
   <ItemGroup>

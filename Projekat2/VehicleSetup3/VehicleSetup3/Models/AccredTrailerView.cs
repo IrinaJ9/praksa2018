@@ -11,15 +11,19 @@ namespace VehicleSetup3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class AccredTrailerView
     {
         public string FleetNo { get; set; }
         public string Name { get; set; }
         public string Class { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ValidFromDate { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ExpiryDate { get; set; }
         public string AlertOperation { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> DateObtained { get; set; }
         public int ID { get; set; }
     }
