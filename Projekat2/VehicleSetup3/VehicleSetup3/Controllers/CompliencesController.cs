@@ -15,6 +15,7 @@ namespace VehicleSetup3.Controllers
         private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: Compliences
+        [Authorize]
         public ActionResult Index()
         {
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
@@ -84,6 +85,7 @@ namespace VehicleSetup3.Controllers
         }
         #endregion
         // GET: Compliences/Details/5
+        [Authorize]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -99,6 +101,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Create
+        [Authorize]
         public ActionResult Create()
         {
             ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
@@ -127,6 +130,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -149,6 +153,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult Edit([Bind(Include = "ID,FleetNo,ComplienceTypeID,TypeID,LicenceClass,LicenseNo,DateObtained,ValidFromDate,ExpiryDate,AlertOperation")] Complience complience)
         {
             if (ModelState.IsValid)
@@ -164,6 +169,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -181,6 +187,7 @@ namespace VehicleSetup3.Controllers
         // POST: Compliences/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Complience complience = db.Compliences.Find(id);

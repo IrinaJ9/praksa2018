@@ -15,6 +15,8 @@ namespace VehicleSetup3.Controllers
         private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: Capacities
+        [Authorize]
+
         public ActionResult Index()
         {
             var capacities = db.Capacities.Include(c => c.FleetAsset);
@@ -22,6 +24,8 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Details/5
+        [Authorize]
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -61,6 +65,8 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Edit/5
+        [Authorize]
+
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,6 +87,8 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize]
+
         public ActionResult Edit([Bind(Include = "ID,FleetNo,Pallets,Spaces,CubicSpace,InternalHeight,InternalWidht,InternalLenght,Tare,GVM,GCM,IsMainCapacity")] Capacity capacity)
         {
             if (ModelState.IsValid)
@@ -94,6 +102,8 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Delete/5
+        [Authorize]
+
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +121,8 @@ namespace VehicleSetup3.Controllers
         // POST: Capacities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize]
+
         public ActionResult DeleteConfirmed(int id)
         {
             Capacity capacity = db.Capacities.Find(id);

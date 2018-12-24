@@ -10,6 +10,8 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
+    [Authorize]
+
     public class FuelTypesController : Controller
     {
         private VehicleSetupEntities db = new VehicleSetupEntities();

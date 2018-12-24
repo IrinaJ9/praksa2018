@@ -10,6 +10,7 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
+    [Authorize]
     public class AssetTypesController : Controller
     {
         private VehicleSetupEntities db = new VehicleSetupEntities();
