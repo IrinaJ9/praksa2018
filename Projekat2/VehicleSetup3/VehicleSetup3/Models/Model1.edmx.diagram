@@ -19,11 +19,11 @@
         <EntityTypeShape EntityType="VehicleSetupModel.FuelType" Width="1.5" PointX="3" PointY="5.375" />
         <EntityTypeShape EntityType="VehicleSetupModel.AccredDriverView" Width="1.5" PointX="22.25" PointY="1" />
         <EntityTypeShape EntityType="VehicleSetupModel.AccredSubcontView" Width="1.5" PointX="16" PointY="1.125" />
-        <EntityTypeShape EntityType="VehicleSetupModel.AccredTrailerView" Width="1.5" PointX="16" PointY="4.125" />
+        <EntityTypeShape EntityType="VehicleSetupModel.AccredTrailerView" Width="1.5" PointX="16" PointY="3.875" />
         <EntityTypeShape EntityType="VehicleSetupModel.InductionDriverView" Width="1.5" PointX="22.25" PointY="4.125" />
         <EntityTypeShape EntityType="VehicleSetupModel.InductionSubcontractorView" Width="1.5" PointX="24" PointY="1" />
         <EntityTypeShape EntityType="VehicleSetupModel.InsuranceView" Width="1.5" PointX="18" PointY="1.125" />
-        <EntityTypeShape EntityType="VehicleSetupModel.LicenceView" Width="1.5" PointX="18" PointY="4.125" />
+        <EntityTypeShape EntityType="VehicleSetupModel.LicenceView" Width="1.5" PointX="18" PointY="3.875" />
         <EntityTypeShape EntityType="VehicleSetupModel.RatingTrailerView" Width="1.5" PointX="24.25" PointY="4" />
         <EntityTypeShape EntityType="VehicleSetupModel.RatingVehicleView" Width="1.5" PointX="26.125" PointY="1.125" />
         <EntityTypeShape EntityType="VehicleSetupModel.RegTrailerView" Width="1.5" PointX="20" PointY="1.125" />

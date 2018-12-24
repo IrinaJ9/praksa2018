@@ -277,24 +277,27 @@
                 @Html.HiddenFor(model => model.FleetNo)
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.AdditionalFieldName, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.AdditionalFieldName, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.AdditionalFieldName, "", new { @class = "text-danger" })
-                    </div>
+                    <button type="button" id="MoreAdd" class="btn btn-default">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
                 </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(model => model.AdditionalFieldValue, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.AdditionalFieldValue, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(model => model.AdditionalFieldValue, "", new { @class = "text-danger" })
-                    </div>
+                    <div id="AddFForm"></div>
+                    @*<div class="form-group">
+                @Html.LabelFor(model => model.AdditionalFieldName, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AdditionalFieldName, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AdditionalFieldName, "", new { @class = "text-danger" })
                 </div>
+            </div>
 
-                <div class="form-group">
-                    <input type="button" class="btn btn-default glyphicon glyphicon-plus-sign" />
+            <div class="form-group">
+                @Html.LabelFor(model => model.AdditionalFieldValue, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.EditorFor(model => model.AdditionalFieldValue, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.AdditionalFieldValue, "", new { @class = "text-danger" })
                 </div>
+            </div>*@
             </div>
         </div>
     </div>
@@ -312,8 +315,9 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
-    <script>
+<script>
         $(document).ready(function () {
+            var i = 0;
             //FleetAsset
             $('#Save').click(function () {
                 $.ajax({
@@ -333,7 +337,6 @@
                         FuelTypeID: $('#FuelTypeID').val(),
                     },
                     success: function (data, status, xhr) {
-                        if (data.success) {
                             //Capacity
                             $.ajax({
                                 url: '/Capacities/Create',
@@ -350,7 +353,7 @@
                                     Tare: $('#Tare').val(),
                                     GVM: $('#GVM').val(),
                                     GCM: $('#GCM').val(),
-                                    IsMainCapacity: $('#IsMainCapacity').is(":cheked"),
+                                    IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
                                     AxelWeight1:$('#AxelWeight1').val(),
                                     AxelWeight2:$('#AxelWeight2').val(),
                                     AxelWeight3:$('#AxelWeight3').val(),
@@ -386,22 +389,24 @@
                                 }
                             })
                             //AdditionalFields
-                            $.ajax({
-                                url: '/AdditionalFields/Create',
-                                type: 'POST',
-                                datatype: 'json',
-                                data: {
-                                    FleetNo: $('#FleetNo').val(),
-                                    Name: $('#AdditionalFieldsName').val(),
-                                    Value: $('#AdditionalFieldsValue').val(),
-                                },
-                                success: function (data, status, xhr) {
+                            for (var j = 0; i > 0; i-- , j++) {
+                                $.ajax({
+                                    url: '/AdditionalFields/Create',
+                                    type: 'POST',
+                                    datatype: 'json',
+                                    data: {
+                                        FleetNo: $('#FleetNo').val(),
+                                        Name: $('#AddFForm > .form-group > .col-md-10 > #AdditionalFieldName').val(),
+                                        Value: $('#AddFForm > .form-group > .col-md-10 > #AdditionalFieldValue').val(),
+                                    },
+                                    success: function (data, status, xhr) {
 
-                                },
-                                error: function (jqXhr, textStatus, errorMessage) {
-                                    alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
-                                }
-                            })
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
+                                    }
+                                })
+                            }
 
 
 
@@ -409,21 +414,62 @@
 
 
 
-                        }
-                        else
-                        {
-                            for (var err of data.error) {
-                                var field = err.Key;
-                                var errField = $('[data-valmsg-for="' + field + '"]')
-                                errField.html(err.Value.join("<br>"));
-                            }
-                        }
+
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
                         alert("Nije uneseno u bazu:\n" + errorMessage);
                     }
                 });
-            }) })
-        
-    </script>
+            })
+
+            $('#MoreAdd').click(function () {
+                i++;
+                //Additional field Name
+                var divFormName = document.createElement('div');
+                divFormName.className = 'form-group';
+                divFormName.id = 'AFName' + i;
+                document.getElementById("AddFForm").appendChild(divFormName);
+
+                var labelName = document.createElement('label');
+                labelName.className = 'control-label col-md-2';
+                labelName.textContent = 'Additional Field Name ' + i;
+                divFormName.appendChild(labelName);
+
+                var divInputN = document.createElement('div');
+                divInputN.className = 'col-md-10';
+                divFormName.appendChild(divInputN);
+
+                var inputFieldN = document.createElement('input');
+                inputFieldN.type = 'string';
+                inputFieldN.className = 'form-control text-box single-line';
+                inputFieldN.id = 'AdditionalFieldName';
+                inputFieldN.name = 'AdditionalFieldName';
+                divInputN.appendChild(inputFieldN);
+
+
+
+                //Additional Field Value
+                var divFormValue = document.createElement('div');
+                divFormValue.className = 'form-group';
+                divFormValue.id = 'AFValue' + i;
+                document.getElementById("AddFForm").appendChild(divFormValue);
+
+                var labelName = document.createElement('label');
+                labelName.className = 'control-label col-md-2';
+                labelName.textContent = 'Additional Field Value ' + i;
+                divFormValue.appendChild(labelName);
+
+                var divInputV = document.createElement('div');
+                divInputV.className = 'col-md-10';
+                divFormValue.appendChild(divInputV);
+
+                var inputFieldV = document.createElement('input');
+                inputFieldV.type = 'string';
+                inputFieldV.className = 'form-control text-box single-line';
+                inputFieldV.id = 'AdditionalFieldValue';
+                inputFieldV.name = 'AdditionalFieldValue';
+                divInputV.appendChild(inputFieldV)
+            })
+        })
+</script>
 }
