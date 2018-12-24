@@ -280,6 +280,10 @@
                     <button type="button" id="MoreAdd" class="btn btn-default">
                         <span class="glyphicon glyphicon-plus"></span>
                     </button>
+
+                    <button type="button" id="LessAdd" class="btn btn-default">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
                 </div>
 
                     <div id="AddFForm"></div>
@@ -318,8 +322,9 @@
 <script>
         $(document).ready(function () {
             var i = 0;
-            //FleetAsset
+            //Dugme Save
             $('#Save').click(function () {
+            //FleetAsset
                 $.ajax({
                     url: '/fleetAssets/Create',
                     type: 'POST',
@@ -389,15 +394,15 @@
                                 }
                             })
                             //AdditionalFields
-                            for (var j = 0; i > 0; i-- , j++) {
+                            for (; i > 0; i--) {
                                 $.ajax({
                                     url: '/AdditionalFields/Create',
                                     type: 'POST',
                                     datatype: 'json',
                                     data: {
                                         FleetNo: $('#FleetNo').val(),
-                                        Name: $('#AddFForm > .form-group > .col-md-10 > #AdditionalFieldName').val(),
-                                        Value: $('#AddFForm > .form-group > .col-md-10 > #AdditionalFieldValue').val(),
+                                        Name: $("#AdditionalFieldName" + i).val(),
+                                        Value: $("#AdditionalFieldValue" + i).val(),
                                     },
                                     success: function (data, status, xhr) {
 
@@ -409,8 +414,8 @@
                             }
 
 
-
-                            location.href = "/FleetAssets";
+                        i = 0;
+                        location.href = "/FleetAssets";
 
 
 
@@ -422,6 +427,7 @@
                 });
             })
 
+            //dugme +
             $('#MoreAdd').click(function () {
                 i++;
                 //Additional field Name
@@ -442,7 +448,7 @@
                 var inputFieldN = document.createElement('input');
                 inputFieldN.type = 'string';
                 inputFieldN.className = 'form-control text-box single-line';
-                inputFieldN.id = 'AdditionalFieldName';
+                inputFieldN.id = 'AdditionalFieldName' + i;
                 inputFieldN.name = 'AdditionalFieldName';
                 divInputN.appendChild(inputFieldN);
 
@@ -466,9 +472,20 @@
                 var inputFieldV = document.createElement('input');
                 inputFieldV.type = 'string';
                 inputFieldV.className = 'form-control text-box single-line';
-                inputFieldV.id = 'AdditionalFieldValue';
+                inputFieldV.id = 'AdditionalFieldValue' + i;
                 inputFieldV.name = 'AdditionalFieldValue';
                 divInputV.appendChild(inputFieldV)
+            })
+
+            //Dugme -
+            $('#LessAdd').click(function () {
+                $("#AFName" + i).remove();
+                $("#AFValue" + i).remove();
+                if (i <= 0) {
+                    i = 0;
+                } else {
+                    i--;
+                }
             })
         })
 </script>
