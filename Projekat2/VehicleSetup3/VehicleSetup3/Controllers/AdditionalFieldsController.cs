@@ -81,16 +81,17 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,Name,Value")] AdditionalField additionalField)
+        public JsonResult Edit([Bind(Include = "ID,FleetNo,Name,Value")] AdditionalField additionalField)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(additionalField).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+               // return RedirectToAction("Index");
             }
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", additionalField.FleetNo);
-            return View(additionalField);
+            // return View(additionalField);
+            return Json(additionalField);
         }
 
         // GET: AdditionalFields/Delete/5
