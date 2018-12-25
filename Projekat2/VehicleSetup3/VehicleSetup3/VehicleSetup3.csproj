@@ -219,6 +219,7 @@
     <Compile Include="Models\Capacity.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\FABLists.cs" />
     <Compile Include="Models\FleetAssetBig.cs" />
     <Compile Include="Models\Complience.cs">
       <DependentUpon>Model1.tt</DependentUpon>

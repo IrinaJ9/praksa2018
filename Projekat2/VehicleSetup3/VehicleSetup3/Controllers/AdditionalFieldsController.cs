@@ -72,7 +72,7 @@ namespace VehicleSetup3.Controllers
             {
                 return HttpNotFound();
             }
-            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", additionalField.FleetNo);
+            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "FleetNo", additionalField.FleetNo);
             return View(additionalField);
         }
 
@@ -80,18 +80,17 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public JsonResult Edit([Bind(Include = "ID,FleetNo,Name,Value")] AdditionalField additionalField)
+        public ActionResult Edit([Bind(Include = "ID,FleetNo,Name,Value")] AdditionalField additionalField)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(additionalField).State = EntityState.Modified;
                 db.SaveChanges();
-               // return RedirectToAction("Index");
+                return RedirectToAction("Index");
             }
-            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", additionalField.FleetNo);
-            // return View(additionalField);
-            return Json(additionalField);
+            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "FleetNo", additionalField.FleetNo);
+            return View(additionalField);
+            //return Json(additionalField);
         }
 
         // GET: AdditionalFields/Delete/5

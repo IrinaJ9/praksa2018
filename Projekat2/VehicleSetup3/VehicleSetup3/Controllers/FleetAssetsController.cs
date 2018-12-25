@@ -33,7 +33,14 @@ namespace VehicleSetup3.Controllers
             {
                 return HttpNotFound();
             }
-            return View(fleetAsset);
+            FABLists fabl = new FABLists()
+            {
+                fa = fleetAsset,
+                cl = db.Compliences.Where(c => fleetAsset.FleetNo == c.FleetNo).ToList(),
+                cp = db.Capacities.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList(),
+                af = db.AdditionalFields.Where(a => fleetAsset.FleetNo == a.FleetNo).ToList(),
+            };
+            return View(fabl);
         }
 
         // GET: FleetAssets/Create
@@ -93,10 +100,12 @@ namespace VehicleSetup3.Controllers
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
             FleetAsset fleetAsset = db.FleetAssets.Find(id);
+            
             if (fleetAsset == null)
             {
                 return HttpNotFound();
             }
+        
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
             ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fleetAsset.TypeID);
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
@@ -109,21 +118,20 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "FleetNo,RegistrationNo,Depot,Year,Description,FleetAssetMakeID,FleetAssetModelID,TypeID,SubTypeID,AxelWeight1,AxelWeight2,AxelWeight3,FuelTypeID")] FleetAsset fleetAsset)
+        public JsonResult Edit(FleetAsset fleetAsset)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(fleetAsset).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
             ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fleetAsset.TypeID);
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return View(fleetAsset);
+            return Json(fleetAsset);
         }
 
         // GET: FleetAssets/Delete/5
@@ -147,6 +155,22 @@ namespace VehicleSetup3.Controllers
         public ActionResult DeleteConfirmed(string id)
         {
             FleetAsset fleetAsset = db.FleetAssets.Find(id);
+            List<Complience> complFA = db.Compliences.Where(c => fleetAsset.FleetNo == c.FleetNo).ToList();
+            List<AdditionalField> addfFA = db.AdditionalFields.Where(a => fleetAsset.FleetNo == a.FleetNo).ToList();
+            List<Capacity> capalFA = db.Capacities.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList();
+            //delete capacities with this FANo
+            foreach (Capacity cap in capalFA)
+                db.Capacities.Remove(cap);
+
+            //delete compliences with this FANo
+            foreach (Complience com in complFA)
+                db.Compliences.Remove(com);
+
+            //delete Additional Fields with this FANo
+            foreach (AdditionalField ad in addfFA)
+                db.AdditionalFields.Remove(ad);
+
+            //delete this FA
             db.FleetAssets.Remove(fleetAsset);
             db.SaveChanges();
             return RedirectToAction("Index");
