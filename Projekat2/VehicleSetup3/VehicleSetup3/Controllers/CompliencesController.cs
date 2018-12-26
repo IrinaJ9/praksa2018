@@ -26,64 +26,6 @@ namespace VehicleSetup3.Controllers
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
-        #region views
-        public ActionResult Licence()
-        {
-            var licence = db.LicenceViews;
-            return View(licence.ToList());
-        }
-        public ActionResult Insurance()
-        {
-            var insurance = db.InsuranceViews;
-            return View(insurance.ToList());
-        }
-        public ActionResult AccredDriver()
-        {
-            var accDrv = db.AccredDriverViews;
-            return View("AccreditationDriverView",accDrv.ToList());
-        }
-        public ActionResult AccredTrailer()
-        {
-            var accTrl = db.AccredTrailerViews;
-            return View("AccreditationTrailerView",accTrl.ToList());
-        }
-
-        public ActionResult AccredSubCon()
-        {
-            var accSuB = db.AccredSubcontViews;
-            return View("AccreditationSubContractorView", accSuB.ToList());
-        }
-        public ActionResult InductionDriver()
-        {
-            var indDrv = db.InductionDriverViews;
-            return View("InductionDriverView", indDrv.ToList());
-        }
-        public ActionResult InductionSubCon()
-        {
-            var indSuC = db.InductionSubcontractorViews;
-            return View("InductionSubContractorView", indSuC.ToList());
-        }
-        public ActionResult RatingVehicle()
-        {
-            var rtVeh = db.RatingVehicleViews;
-            return View("RatingVehicleView", rtVeh.ToList());
-        }
-        public ActionResult RatingTrailer()
-        {
-            var rtVeh = db.RatingTrailerViews;
-            return View("RatingTrailerView", rtVeh.ToList());
-        }
-        public ActionResult RegVehicle()
-        {
-            var regVeh = db.RegVehicleViews;
-            return View("RegistrationVehicleView", regVeh.ToList());
-        }
-        public ActionResult RegTrailer()
-        {
-            var regVeh = db.RegTrailerViews;
-            return View("RegistrationTrailerView", regVeh.ToList());
-        }
-        #endregion
         // GET: Compliences/Details/5
         [Authorize]
         public ActionResult Details(int? id)

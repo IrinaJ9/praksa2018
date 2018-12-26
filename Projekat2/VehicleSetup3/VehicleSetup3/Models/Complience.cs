@@ -11,7 +11,8 @@ namespace VehicleSetup3.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Complience
     {
         public int ID { get; set; }
@@ -20,8 +21,11 @@ namespace VehicleSetup3.Models
         public int SubTypeID { get; set; }
         public string LicenceClass { get; set; }
         public string LicenseNo { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> DateObtained { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ValidFromDate { get; set; }
+        [DataType(DataType.Date)]
         public Nullable<System.DateTime> ExpiryDate { get; set; }
         public string AlertOperation { get; set; }
     

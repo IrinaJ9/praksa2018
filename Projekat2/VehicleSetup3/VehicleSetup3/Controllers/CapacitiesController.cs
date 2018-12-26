@@ -115,6 +115,8 @@ namespace VehicleSetup3.Controllers
 
         // POST: Capacities/Delete/5
         [HttpPost, ActionName("Delete")]
+        [ValidateAntiForgeryToken]
+        [Authorize]
         public ActionResult DeleteConfirmed(int id)
         {
             Capacity capacity = db.Capacities.Find(id);

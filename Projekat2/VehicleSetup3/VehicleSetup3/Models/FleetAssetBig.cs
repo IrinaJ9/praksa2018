@@ -69,8 +69,11 @@ namespace VehicleSetup3.Models
         public int ComplienceSubTypeID { get; set; }
         public string LicenceClass { get; set; }
         public string LicenseNo { get; set; }
+        [DataType(DataType.Date)]
         public DateTime? DateObtained { get; set; }
+        [DataType(DataType.Date)]
         public DateTime? ValidFromDate { get; set; }
+        [DataType(DataType.Date)]
         public DateTime? ExpiryDate { get; set; }
         public string AlertOperation { get; set; }
         //---------------------------------------------------
