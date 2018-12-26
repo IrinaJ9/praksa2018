@@ -89,7 +89,7 @@ namespace VehicleSetup3.Controllers
         [ValidateAntiForgeryToken]
         [Authorize]
 
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,Pallets,Spaces,CubicSpace,InternalHeight,InternalWidht,InternalLenght,Tare,GVM,GCM,IsMainCapacity")] Capacity capacity)
+        public ActionResult Edit(Capacity capacity)
         {
             if (ModelState.IsValid)
             {

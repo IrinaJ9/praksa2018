@@ -82,7 +82,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,Name,Extension,Size,Path,Image,IsDefaultImage")] Attachment attachment)
+        public ActionResult Edit(Attachment attachment)
         {
             if (ModelState.IsValid)
             {

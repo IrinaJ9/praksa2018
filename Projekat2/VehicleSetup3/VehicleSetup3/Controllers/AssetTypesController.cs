@@ -47,7 +47,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Type,IsVehicle")] AssetType assetType)
+        public ActionResult Create(AssetType assetType)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Type,IsVehicle")] AssetType assetType)
+        public ActionResult Edit(AssetType assetType)
         {
             if (ModelState.IsValid)
             {

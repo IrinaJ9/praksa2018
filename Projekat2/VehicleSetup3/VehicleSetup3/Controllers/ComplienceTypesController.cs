@@ -48,7 +48,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Class")] ComplienceType complienceType)
+        public ActionResult Create(ComplienceType complienceType)
         {
             if (ModelState.IsValid)
             {
@@ -80,7 +80,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Class")] ComplienceType complienceType)
+        public ActionResult Edit(ComplienceType complienceType)
         {
             if (ModelState.IsValid)
             {

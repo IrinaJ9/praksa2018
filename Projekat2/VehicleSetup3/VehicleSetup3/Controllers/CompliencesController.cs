@@ -154,7 +154,7 @@ namespace VehicleSetup3.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         [Authorize]
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,ComplienceTypeID,TypeID,LicenceClass,LicenseNo,DateObtained,ValidFromDate,ExpiryDate,AlertOperation")] Complience complience)
+        public ActionResult Edit(Complience complience)
         {
             if (ModelState.IsValid)
             {

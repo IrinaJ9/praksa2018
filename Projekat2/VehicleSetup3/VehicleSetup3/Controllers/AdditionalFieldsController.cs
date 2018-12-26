@@ -80,27 +80,17 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-<<<<<<< HEAD
-      
         public JsonResult Edit(AdditionalField additionalField)
-=======
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,Name,Value")] AdditionalField additionalField)
->>>>>>> BrankoBranch2
         {
             if (ModelState.IsValid)
             {
                 db.Entry(additionalField).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "FleetNo", additionalField.FleetNo);
-<<<<<<< HEAD
             // return View(additionalField);
             return Json(additionalField);
-=======
-            return View(additionalField);
-            //return Json(additionalField);
->>>>>>> BrankoBranch2
         }
 
         // GET: AdditionalFields/Delete/5
