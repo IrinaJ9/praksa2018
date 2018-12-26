@@ -44,20 +44,6 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: FleetAssets/Create
-        //public ActionResult Create()
-        //{
-        //    ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType");
-        //    ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type");
-        //    ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer");
-        //    ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name");
-        //    ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel");
-        //    ViewBag.Capacity = db.Capacities;
-        //    ViewBag.AdditionalFields = db.AdditionalFields;
-        //    ViewBag.Attachments = db.Attachments;
-        //    ViewBag.Compliences = db.Compliences;
-        //    return View();
-        //}
-
         public ActionResult Create()
         {
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType");
@@ -105,13 +91,21 @@ namespace VehicleSetup3.Controllers
             {
                 return HttpNotFound();
             }
-        
-            ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
-            ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fleetAsset.TypeID);
-            ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
-            ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
-            ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return View(fleetAsset);
+
+            FABLists fabl = new FABLists()
+            {
+                fa = fleetAsset,
+                cl = db.Compliences.Where(c => fleetAsset.FleetNo == c.FleetNo).ToList(),
+                cp = db.Capacities.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList(),
+                af = db.AdditionalFields.Where(a => fleetAsset.FleetNo == a.FleetNo).ToList(),
+            };
+
+            ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fabl.fa.SubTypeID);
+            ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fabl.fa.TypeID);
+            ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fabl.fa.FleetAssetMakeID);
+            ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fabl.fa.FleetAssetModelID);
+            ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fabl.fa.FuelTypeID);
+            return View(fabl);
         }
 
         // POST: FleetAssets/Edit/5
