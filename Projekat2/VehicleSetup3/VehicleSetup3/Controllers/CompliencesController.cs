@@ -94,20 +94,18 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        [Authorize]
-        public ActionResult Edit(Complience complience)
+        public JsonResult Edit(Complience complience)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(complience).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
-            return View(complience);
+            return Json(complience);
         }
 
         // GET: Compliences/Delete/5
