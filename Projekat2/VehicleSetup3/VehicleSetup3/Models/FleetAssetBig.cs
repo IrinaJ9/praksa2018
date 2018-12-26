@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -19,10 +20,15 @@ namespace VehicleSetup3.Models
         }
         #region Fields
     //  FleetAsset
+        [Required, StringLength(8)]
         public string FleetNo { get; set; }
+        [Required, StringLength(12)]
         public string RegistrationNo { get; set; }
+        [Required, StringLength(20)]
         public string Depot { get; set; }
+        [Required, StringLength(4)]
         public string Year { get; set; }
+        [StringLength(100)]
         public string Description { get; set; }
         public int FleetAssetMakeID { get; set; }
         public int FleetAssetModelID { get; set; }
@@ -32,18 +38,30 @@ namespace VehicleSetup3.Models
     //---------------------------------------------------
 
     //  Capacities
+        
         public int? Pallets { get; set; }
+
         public int? Spaces { get; set; }
+        [Range(0,9999999.99)]
         public decimal? CubicSpace { get; set; }
+        [Range(0,99999.99)]
         public decimal? InternalHeight { get; set; }
+        [Range(0, 99999.99)]
         public decimal? InternalWidht { get; set; }
+        [Range(0, 99999.99)]
         public decimal? InternalLenght { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? Tare { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? GVM { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? GCM { get; set; }
         public bool IsMainCapacity { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? AxelWeight1 { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? AxelWeight2 { get; set; }
+        [Range(0, 9999999.999)]
         public decimal? AxelWeight3 { get; set; }
     //---------------------------------------------------
     //  Complineces
@@ -57,7 +75,9 @@ namespace VehicleSetup3.Models
         public string AlertOperation { get; set; }
         //---------------------------------------------------
         //  AdditionalFields
+        [StringLength(50)]
         public string AdditionalFieldName { get; set; }
+        [StringLength(50)]
         public string AdditionalFieldValue { get; set; }
         //---------------------------------------------------
 
