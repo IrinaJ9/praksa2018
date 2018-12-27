@@ -81,17 +81,16 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit(Attachment attachment)
+        public JsonResult Edit(Attachment attachment)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(attachment).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", attachment.FleetNo);
-            return View(attachment);
+            return Json(attachment);
         }
 
         // GET: Attachments/Delete/5

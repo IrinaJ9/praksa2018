@@ -21,6 +21,9 @@
         <li>
             <a class="nav-link" data-toggle="tab" href="#AdditonalFields">AdditonalFields</a>
         </li>
+        <li>
+            <a class="nav-link" data-toggle="tab" href="#Attachments">Attachments</a>
+        </li>
 
     </ul>
     <div class="form-group">
@@ -326,6 +329,60 @@
                 </div>
             </div>*@
             </div>
+            <div id="Attachments" class="tab-pane fade">
+                <h4>Attachment</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AttachmentName, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AttachmentName, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AttachmentName, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AttachmentExtension, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AttachmentExtension, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AttachmentExtension, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AttachmentSize, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AttachmentSize, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AttachmentSize, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.AttachmentPath, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.AttachmentPath, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.AttachmentPath, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.Image, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        @Html.EditorFor(model => model.Image, new { htmlAttributes = new { @class = "form-control" } })
+                        @Html.ValidationMessageFor(model => model.Image, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsDefaultImage, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsDefaultImage)
+                            @Html.ValidationMessageFor(model => model.IsDefaultImage, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+                </div>
         </div>
     </div>
 
@@ -365,76 +422,104 @@
                         FuelTypeID: $('#FuelTypeID').val(),
                     },
                     success: function (data, status, xhr) {
-                            //Capacity
-                            $.ajax({
-                                url: '/Capacities/Create',
-                                type: 'POST',
-                                datatype: 'json',
-                                data: {
-                                    FleetNo: $('#FleetNo').val(),
-                                    Pallets: $('#Pallets').val(),
-                                    Spaces: $('#Spaces').val(),
-                                    CubicSpace: $('#CubicSpaces').val(),
-                                    InternalHeight: $('#InternalHeight').val(),
-                                    InternalWidth: $('#InternalWidth').val(),
-                                    InternalLenght: $('#InternalLenght').val(),
-                                    Tare: $('#Tare').val(),
-                                    GVM: $('#GVM').val(),
-                                    GCM: $('#GCM').val(),
-                                    IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
-                                    AxelWeight1:$('#AxelWeight1').val(),
-                                    AxelWeight2:$('#AxelWeight2').val(),
-                                    AxelWeight3:$('#AxelWeight3').val(),
-                                },
-                                success: function (data, status, xhr) {
+                        //Capacity
+                        $.ajax({
+                            url: '/Capacities/Create',
+                            type: 'POST',
+                            datatype: 'json',
+                            data: {
+                                FleetNo: $('#FleetNo').val(),
+                                Pallets: $('#Pallets').val(),
+                                Spaces: $('#Spaces').val(),
+                                CubicSpace: $('#CubicSpaces').val(),
+                                InternalHeight: $('#InternalHeight').val(),
+                                InternalWidth: $('#InternalWidth').val(),
+                                InternalLenght: $('#InternalLenght').val(),
+                                Tare: $('#Tare').val(),
+                                GVM: $('#GVM').val(),
+                                GCM: $('#GCM').val(),
+                                IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
+                                AxelWeight1:$('#AxelWeight1').val(),
+                                AxelWeight2:$('#AxelWeight2').val(),
+                                AxelWeight3:$('#AxelWeight3').val(),
+                            },
+                            success: function (data, status, xhr) {
 
-                                },
-                                error: function (jqXhr, textStatus, errorMessage) {
-                                    alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
-                                }
-                            })
-                            //Compliences
-                            $.ajax({
-                                url: '/Compliences/Create',
-                                type: 'POST',
-                                datatype: 'json',
-                                data: {
-                                    FleetNo: $('#FleetNo').val(),
-                                    ComplienceTypeID: $('#ComplienceTypeID').val(),
-                                    SubTypeID: $('#ComplienceSubTypeID').val(),
-                                    LicenceClass: $('#LicenceClass').val(),
-                                    LicenceNo: $('#LicenceNo').val(),
-                                    DateObtained: $('#DateObtained').val(),
-                                    ValidFromDate: $('#ValidFromDate').val(),
-                                    ExpiriyDate: $('#ExpiriyDate').val(),
-                                    AllertOperation: $('#AllertOperation').val(),
-                                },
-                                success: function (data, status, xhr) {
-
-                                },
-                                error: function (jqXhr, textStatus, errorMessage) {
-                                    alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
-                                }
-                            })
-                            //AdditionalFields
-                            for (; i > 0; i--) {
-                                $.ajax({
-                                    url: '/AdditionalFields/Create',
-                                    type: 'POST',
-                                    datatype: 'json',
-                                    data: {
-                                        FleetNo: $('#FleetNo').val(),
-                                        Name: $("#AdditionalFieldName" + i).val(),
-                                        Value: $("#AdditionalFieldValue" + i).val(),
-                                    },
-                                    success: function (data, status, xhr) {
-
-                                    },
-                                    error: function (jqXhr, textStatus, errorMessage) {
-                                        alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
-                                    }
-                                })
+                            },
+                            error: function (jqXhr, textStatus, errorMessage) {
+                                console.log("Capacity ajax");
+                                console.log(errorMessage);
+                                alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
                             }
+                        })
+                        //Compliences
+                        $.ajax({
+                            url: '/Compliences/Create',
+                            type: 'POST',
+                            datatype: 'json',
+                            data: {
+                                FleetNo: $('#FleetNo').val(),
+                                ComplienceTypeID: $('#ComplienceTypeID').val(),
+                                SubTypeID: $('#ComplienceSubTypeID').val(),
+                                LicenceClass: $('#LicenceClass').val(),
+                                LicenceNo: $('#LicenceNo').val(),
+                                DateObtained: $('#DateObtained').val(),
+                                ValidFromDate: $('#ValidFromDate').val(),
+                                ExpiriyDate: $('#ExpiriyDate').val(),
+                                AllertOperation: $('#AllertOperation').val(),
+                            },
+                            success: function (data, status, xhr) {
+
+                            },
+                            error: function (jqXhr, textStatus, errorMessage) {
+                                console.log("Compliences ajax");
+                                console.log(errorMessage);
+                                alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
+                            }
+                        })
+                        //AdditionalFields
+                        for (; i > 0; i--) {
+                            $.ajax({
+                                url: '/AdditionalFields/Create',
+                                type: 'POST',
+                                datatype: 'json',
+                                data: {
+                                    FleetNo: $('#FleetNo').val(),
+                                    Name: $("#AdditionalFieldName" + i).val(),
+                                    Value: $("#AdditionalFieldValue" + i).val(),
+                                },
+                                success: function (data, status, xhr) {
+
+                                },
+                                error: function (jqXhr, textStatus, errorMessage) {
+                                    console.log("AdditionalFields ajax");
+                                    console.log(errorMessage);
+                                    alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
+                                }
+                            })
+                        }
+                        //Attachments
+                        $.ajax({
+                            url: '/Attachments/Create',
+                            type: 'POST',
+                            datatype: 'json',
+                            data: {
+                                FleetNo: $('#FleetNo').val(),
+                                Name: $('#AttachmentName').val(),
+                                Extension: $('#AttachmentExtension').val(),
+                                Size: $('#AttachmentSize').val(),
+                                Path: $('#AttachmentPath').val(),
+                                IsDefaultImage: $('#IsDefaultImage').is(":checked").valueOf(),
+                            },
+                            success: function (jqXhr, textStatus, errorMessage) {
+
+                            },
+                            error: function (jqXhr, textStatus, errorMessage) {
+                                console.log("Attachment ajax");
+                                console.log(errorMessage);
+                                alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
+                            }
+                        })
 
 
                         i = 0;
@@ -445,6 +530,8 @@
 
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
+                        console.log("FleetAsset ajax");
+                        console.log(errorMessage);
                         alert("Nije uneseno u bazu:\n" + errorMessage);
                     }
                 });

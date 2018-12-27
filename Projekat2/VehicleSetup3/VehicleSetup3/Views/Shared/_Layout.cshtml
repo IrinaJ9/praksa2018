@@ -24,7 +24,26 @@
                     <li>@Html.ActionLink("Fleet Asset", "Index", "FleetAssets")</li>
                     <li>@Html.ActionLink("Additional Fields", "Index", "AdditionalFields")</li>
                     <li>@Html.ActionLink("Complience", "ComplienceTypes", "Compliences")</li>
-                </ul>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">Admin Expansion <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Asset SubType", "Index", "AssetSubTypes")</li>
+                                <li>@Html.ActionLink("Asset Type", "Index", "AssetTypes")</li>
+                                <li>@Html.ActionLink("Attachments", "Index", "Attachments")</li>
+                                <li>@Html.ActionLink("Capacities", "Index", "Capacities")</li>
+                                <li>@Html.ActionLink("Compliences List", "Index", "Compliences")</li>
+                                <li>@Html.ActionLink("Compliences SubType", "Index", "CompliencesSubTypes")</li>
+                                <li>@Html.ActionLink("Compliences Type", "Index", "CompliencesTypes")</li>
+                                <li>@Html.ActionLink("Fleet Asset Makes", "Index", "FleetAssetMakes")</li>
+                                <li>@Html.ActionLink("Fleet Asset Model", "Index", "FleetAssetModels")</li>
+                                <li>@Html.ActionLink("Fuel Type", "Index", "FuelTypes")</li>
+                            </ul>
+                        </li>
+                    }
+
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

@@ -83,6 +83,13 @@ namespace VehicleSetup3.Models
         [StringLength(50)]
         public string AdditionalFieldValue { get; set; }
         //---------------------------------------------------
+        //Attachments
+        public string AttachmentName { get; set; }
+        public string AttachmentExtension { get; set; }
+        public string AttachmentSize { get; set; }
+        public string AttachmentPath { get; set; }
+        public byte[] Image { get; set; }
+        public bool IsDefaultImage { get; set; }
 
         #endregion
 
