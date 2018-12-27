@@ -38,9 +38,9 @@ namespace VehicleSetup3.Models
     //---------------------------------------------------
 
     //  Capacities
-        
+        [Range(0,99)]
         public int? Pallets { get; set; }
-
+        [Range(0,99)]
         public int? Spaces { get; set; }
         [Range(0,9999999.99)]
         public decimal? CubicSpace { get; set; }
