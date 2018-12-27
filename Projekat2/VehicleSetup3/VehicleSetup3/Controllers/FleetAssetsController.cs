@@ -92,20 +92,29 @@ namespace VehicleSetup3.Controllers
                 return HttpNotFound();
             }
 
+            FABLists fabl = new FABLists()
+            {
+                fa = fleetAsset,
+                cp = db.Capacities.Where(w => fleetAsset.FleetNo == w.FleetNo).ToList(),
+                cl = db.Compliences.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList(),
+                af = db.AdditionalFields.Where(r => fleetAsset.FleetNo == r.FleetNo).ToList(),
+            };
+
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
             ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fleetAsset.TypeID);
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return View(fleetAsset);
+            return View(fabl);
         }
 
         // POST: FleetAssets/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public JsonResult Edit(FleetAsset fleetAsset)
+        public JsonResult Edit(FABLists fabl)
         {
+            FleetAsset fleetAsset = fabl.fa;
             if (ModelState.IsValid)
             {
                 db.Entry(fleetAsset).State = EntityState.Modified;
@@ -117,7 +126,7 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return Json(fleetAsset);
+            return Json(fabl);
         }
 
         // GET: FleetAssets/Delete/5
