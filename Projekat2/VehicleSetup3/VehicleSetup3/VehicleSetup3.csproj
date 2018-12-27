@@ -390,6 +390,7 @@
     <Content Include="Views\FleetAssets\Create5.cshtml" />
     <Content Include="Views\Compliences\ComplienceTypes.cshtml" />
     <Content Include="Views\AdditionalFields\Create6.cshtml" />
+    <Content Include="Views\FleetAssets\Edit0.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -106,27 +106,28 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
             return View(fabl);
+            //return View("Edit0", fleetAsset);
         }
 
         // POST: FleetAssets/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        public JsonResult Edit(FABLists fabl)
+        public JsonResult Edit(FleetAsset fleetAsset)
         {
-            FleetAsset fleetAsset = fabl.fa;
             if (ModelState.IsValid)
             {
                 db.Entry(fleetAsset).State = EntityState.Modified;
                 db.SaveChanges();
                 //return RedirectToAction("Index");
             }
+
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);
             ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type", fleetAsset.TypeID);
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return Json(fabl);
+            return Json(fleetAsset);
         }
 
         // GET: FleetAssets/Delete/5

@@ -117,111 +117,114 @@
 
             @foreach (var item in Model.cp)
             {
+            <div id="cpContent">
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.Pallets, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.Pallets, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.Pallets, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.Pallets, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.Pallets, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.Pallets, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.Spaces, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.Spaces, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.Spaces, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.Spaces, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.Spaces, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.Spaces, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.CubicSpace, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.CubicSpace, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.CubicSpace, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.CubicSpace, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.CubicSpace, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.CubicSpace, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.InternalHeight, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.InternalHeight, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.InternalHeight, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.InternalHeight, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.InternalHeight, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.InternalHeight, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.InternalWidht, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.InternalWidht, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.InternalWidht, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.InternalWidht, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.InternalWidht, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.InternalWidht, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.InternalLenght, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.InternalLenght, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.InternalLenght, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.InternalLenght, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.InternalLenght, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.InternalLenght, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.Tare, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.Tare, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.Tare, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.Tare, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.Tare, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.Tare, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.GVM, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.GVM, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.GVM, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.GVM, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.GVM, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.GVM, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.GCM, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.GCM, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.GCM, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.GCM, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.GCM, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.GCM, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
 
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            @Html.EditorFor(modelItem => item.IsMainCapacity)
-                            @Html.ValidationMessageFor(modelItem => item.IsMainCapacity, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    <div class="checkbox">
+                                        @Html.EditorFor(modelItem => item.IsMainCapacity)
+                                        @Html.ValidationMessageFor(modelItem => item.IsMainCapacity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.AxelWeight1, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.AxelWeight1, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.AxelWeight1, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.AxelWeight2, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.AxelWeight2, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.AxelWeight2, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                @Html.LabelFor(modelItem => item.AxelWeight3, htmlAttributes: new { @class = "control-label col-md-2" })
+                                <div class="col-md-10">
+                                    @Html.EditorFor(modelItem => item.AxelWeight3, new { htmlAttributes = new { @class = "form-control" } })
+                                    @Html.ValidationMessageFor(modelItem => item.AxelWeight3, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.AxelWeight1, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.AxelWeight1, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.AxelWeight1, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.AxelWeight2, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.AxelWeight2, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.AxelWeight2, "", new { @class = "text-danger" })
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    @Html.LabelFor(modelItem => item.AxelWeight3, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(modelItem => item.AxelWeight3, new { htmlAttributes = new { @class = "form-control" } })
-                        @Html.ValidationMessageFor(modelItem => item.AxelWeight3, "", new { @class = "text-danger" })
-                    </div>
-                </div>
+                
             }
 
         </div>
@@ -313,7 +316,9 @@
             @Html.HiddenFor(model => model.fa.FleetNo)
 
             @foreach (var item in Model.af)
-            {<div class="form-group">
+            {
+            <div id="afContent">
+                <div class="form-group">
                     @Html.LabelFor(modelItem => item.Name, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @Html.EditorFor(modelItem => item.Name, new { htmlAttributes = new { @class = "form-control" } })
@@ -327,7 +332,9 @@
                         @Html.EditorFor(modelItem => item.Value, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(modelItem => item.Value, "", new { @class = "text-danger" })
                     </div>
-                </div>}
+                </div>
+            </div>
+            }
 
         </div>
     </div>
@@ -350,107 +357,104 @@
             $('#Save').click(function () {
                 //FleetAsset
                 $.ajax({
-                    url: '/fleetAssets/Edit/' + $('#FleetNo').val(),
+                    url: '/FleetAssets/Edit/' + $('#fa_FleetNo').val(),
                     type: 'POST',
                     datatype: 'json',
                     data: {
-                        FleetNo: $('#FleetNo').val(),
-                        RegistrationNo: $('#RegistrationNo').val(),
-                        Depot: $('#Depot').val(),
-                        Year: $('#Year').val(),
-                        Description: $('#Description').val(),
-                        FleetAssetMakeID: $('#FleetAssetMakeID').val(),
-                        FleetAssetModelID: $('#FleetAssetModelID').val(),
-                        TypeID: $('#TypeID').val(),
-                        SubTypeID: $('#SubTypeID').val(),
-                        FuelTypeID: $('#FuelTypeID').val(),
+                        FleetNo: $('#fa_FleetNo').val(),
+                        RegistrationNo: $('#fa_RegistrationNo').val(),
+                        Depot: $('#fa_Depot').val(),
+                        Year: $('#fa_Year').val(),
+                        Description: $('#fa_Description').val(),
+                        FleetAssetMakeID: $('#fa_FleetAssetMakeID').val(),
+                        FleetAssetModelID: $('#fa_FleetAssetModelID').val(),
+                        TypeID: $('#fa_TypeID').val(),
+                        SubTypeID: $('#fa_SubTypeID').val(),
+                        FuelTypeID: $('#fa_FuelTypeID').val(),
                     },
                     success: function (data, status, xhr) {
-                        {
-                            //Capacity
-                            $('#Capacity').each(function () {
-                                $.ajax({
-                                    url: '/Capacities/Edit',
-                                    type: 'POST',
-                                    datatype: 'json',
-                                    data: {
-                                        ID: $('#ID').val,
-                                        FleetNo: $('#FleetNo').val(),
-                                        Pallets: $('#Pallets').val(),
-                                        Spaces: $('#Spaces').val(),
-                                        CubicSpace: $('#CubicSpaces').val(),
-                                        InternalHeight: $('#InternalHeight').val(),
-                                        InternalWidth: $('#InternalWidth').val(),
-                                        InternalLenght: $('#InternalLenght').val(),
-                                        Tare: $('#Tare').val(),
-                                        GVM: $('#GVM').val(),
-                                        GCM: $('#GCM').val(),
-                                        IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
-                                        AxelWeight1: $('#AxelWeight1').val(),
-                                        AxelWeight2: $('#AxelWeight2').val(),
-                                        AxelWeight3: $('#AxelWeight3').val(),
-                                    },
-                                    success: function (data, status, xhr) {
 
-                                    },
-                                    error: function (jqXhr, textStatus, errorMessage) {
-                                        alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
-                                    }
-                                })
-                            })
-
-                            //Compliences
-                            $('#cplContent').each(function () {
-                                $.ajax({
-                                    url: '/Compliences/Edit',
-                                    type: 'POST',
-                                    datatype: 'json',
-                                    data: {
-                                        ID: $('#ID').val,
-                                        FleetNo: $('#FleetNo').val(),
-                                        LicenceClass: $('#LicenceClass').val(),
-                                        LicenceNo: $('#LicenceNo').val(),
-                                        DateObtained: $('#DateObtained').val(),
-                                        ValidFromDate: $('#ValidFromDate').val(),
-                                        ExpiriyDate: $('#ExpiriyDate').val(),
-                                        AllertOperation: $('#AllertOperation').val(),
-                                    },
-                                    success: function (data, status, xhr) {
-
-                                    },
-                                    error: function (jqXhr, textStatus, errorMessage) {
-                                        alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
-                                    }
-                                })
-                            })
-
-                            //AdditionalFields
-                            $('#AdditonalFields').each(function () {
-                                $.ajax({
-                                    url: '/AdditionalFields/Edit',
-                                    type: 'POST',
-                                    datatype: 'json',
-                                    data: {
-                                        ID: $('#ID').val,
-                                        FleetNo: $('#FleetNo').val(),
-                                        Name: $("#AdditionalFieldName").val(),
-                                        Value: $("#AdditionalFieldValue").val(),
-                                    },
-                                    success: function (data, status, xhr) {
-
-                                    },
-                                    error: function (jqXhr, textStatus, errorMessage) {
-                                        alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
-                                    }
-                                })
-                            })
-                        }
                         location.href = "/FleetAssets";
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
                         alert("Nije uneseno u bazu:\n" + errorMessage);
                     }
                 });
+                //Capacity
+                $('#cpContent').each(function () {
+                    $.ajax({
+                        url: '/Capacities/Edit/' + $('#ID').val(),
+                        type: 'POST',
+                        datatype: 'json',
+                        data: {
+                            ID: $('#ID').val,
+                            FleetNo: $('#fa_FleetNo').val(),
+                            Pallets: $('#Pallets').val(),
+                            Spaces: $('#Spaces').val(),
+                            CubicSpace: $('#CubicSpaces').val(),
+                            InternalHeight: $('#InternalHeight').val(),
+                            InternalWidth: $('#InternalWidth').val(),
+                            InternalLenght: $('#InternalLenght').val(),
+                            Tare: $('#Tare').val(),
+                            GVM: $('#GVM').val(),
+                            GCM: $('#GCM').val(),
+                            IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
+                            AxelWeight1: $('#AxelWeight1').val(),
+                            AxelWeight2: $('#AxelWeight2').val(),
+                            AxelWeight3: $('#AxelWeight3').val(),
+                        },
+                        success: function (data, status, xhr) {
+
+                        },
+                        error: function (jqXhr, textStatus, errorMessage) {
+                            alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
+                        }
+                    })
+                })
+                //Compliences
+                $('#cplContent').each(function () {
+                    $.ajax({
+                        url: '/Compliences/Edit/' + $('#ID').val(),
+                        type: 'POST',
+                        datatype: 'json',
+                        data: {
+                            ID: $('#ID').val,
+                            FleetNo: $('#fa_FleetNo').val(),
+                            LicenceClass: $('#LicenceClass').val(),
+                            LicenceNo: $('#LicenceNo').val(),
+                            DateObtained: $('#DateObtained').val(),
+                            ValidFromDate: $('#ValidFromDate').val(),
+                            ExpiriyDate: $('#ExpiriyDate').val(),
+                            AllertOperation: $('#AllertOperation').val(),
+                        },
+                        success: function (data, status, xhr) {
+
+                        },
+                        error: function (jqXhr, textStatus, errorMessage) {
+                            alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
+                        }
+                    })
+                })
+                //AdditionalFields
+                $('#afContent').each(function () {
+                    $.ajax({
+                        url: '/AdditionalFields/Edit/' + $('#ID').val(),
+                        type: 'POST',
+                        datatype: 'json',
+                        data: {
+                            ID: $('#ID').val,
+                            FleetNo: $('#fa_FleetNo').val(),
+                            Name: $("#AdditionalFieldName").val(),
+                            Value: $("#AdditionalFieldValue").val(),
+                        },
+                        success: function (data, status, xhr) {
+
+                        },
+                        error: function (jqXhr, textStatus, errorMessage) {
+                            alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
+                        }
+                    })
+                })
             })
         })
     </script>
