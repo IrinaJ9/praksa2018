@@ -149,10 +149,11 @@
 <script>
     $(document).ready(function () {
         $.ajax({
-            url: '/Capacities/Edit',
+            url: '/Capacities/Edit' + $('#ID').val(),
             type: 'POST',
             datatype: 'json',
             data: {
+                ID: $('#ID').val(),
                 FleetNo: $('#FleetNo').val(),
                 Pallets: $('#Pallets').val(),
                 Spaces: $('#Spaces').val(),
