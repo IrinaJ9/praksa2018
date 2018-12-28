@@ -115,9 +115,7 @@
             <div class="tab-pane fade" id="Capacity">
                 <h4>Capacity</h4>
                 <hr />
-
                 @Html.HiddenFor(model => model.FleetNo)
-
                 @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
                     @Html.LabelFor(model => model.Pallets, htmlAttributes: new { @class = "control-label col-md-2" })
@@ -126,7 +124,6 @@
                         @Html.ValidationMessageFor(model => model.Pallets, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.Spaces, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -134,7 +131,6 @@
                         @Html.ValidationMessageFor(model => model.Spaces, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.CubicSpace, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -142,7 +138,6 @@
                         @Html.ValidationMessageFor(model => model.CubicSpace, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.InternalHeight, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -150,7 +145,6 @@
                         @Html.ValidationMessageFor(model => model.InternalHeight, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.InternalWidht, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -158,7 +152,6 @@
                         @Html.ValidationMessageFor(model => model.InternalWidht, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.InternalLenght, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -166,7 +159,6 @@
                         @Html.ValidationMessageFor(model => model.InternalLenght, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.Tare, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -174,7 +166,6 @@
                         @Html.ValidationMessageFor(model => model.Tare, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.GVM, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -182,7 +173,6 @@
                         @Html.ValidationMessageFor(model => model.GVM, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.GCM, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -192,22 +182,12 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            @Html.EditorFor(model => model.IsMainCapacity)
-                            @Html.ValidationMessageFor(model => model.IsMainCapacity, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
                     @Html.LabelFor(model => model.AxelWeight1, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.AxelWeight1, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.AxelWeight1, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.AxelWeight2, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
@@ -215,12 +195,20 @@
                         @Html.ValidationMessageFor(model => model.AxelWeight2, "", new { @class = "text-danger" })
                     </div>
                 </div>
-
                 <div class="form-group">
                     @Html.LabelFor(model => model.AxelWeight3, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.AxelWeight3, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.AxelWeight3, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsMainCapacity)
+                            @Html.ValidationMessageFor(model => model.IsMainCapacity, "", new { @class = "text-danger" })
+                        </div>
                     </div>
                 </div>
             </div>
@@ -385,7 +373,7 @@
                 </div>
         </div>
     </div>
-
+</div>
 
 <div class="form-group">
     <div class="col-md-offset-2 col-md-10">

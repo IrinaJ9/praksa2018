@@ -107,8 +107,8 @@ namespace VehicleSetup3.Controllers
             ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer", fleetAsset.FleetAssetMakeID);
             ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name", fleetAsset.FleetAssetModelID);
             ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel", fleetAsset.FuelTypeID);
-            return View(fabl);
-            //return View("Edit0", fleetAsset);
+            //return View(fabl);
+            return View("Edit0", fleetAsset);
         }
 
         // POST: FleetAssets/Edit/5

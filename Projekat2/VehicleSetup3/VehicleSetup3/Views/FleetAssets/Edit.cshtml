@@ -437,15 +437,15 @@
                         Depot: $('#fa_Depot').val(),
                         Year: $('#fa_Year').val(),
                         Description: $('#fa_Description').val(),
-                        FleetAssetMakeID: $('#fa_FleetAssetMakeID').val(),
-                        FleetAssetModelID: $('#fa_FleetAssetModelID').val(),
-                        TypeID: $('#fa_TypeID').val(),
-                        SubTypeID: $('#fa_SubTypeID').val(),
-                        FuelTypeID: $('#fa_FuelTypeID').val(),
+                        FleetAssetMakeID: $('#FleetAssetMakeID').val(),
+                        FleetAssetModelID: $('#FleetAssetModelID').val(),
+                        TypeID: $('#TypeID').val(),
+                        SubTypeID: $('#SubTypeID').val(),
+                        FuelTypeID: $('#FuelTypeID').val(),
                     },
                     success: function (data, status, xhr) {
 
-                        location.href = "/FleetAssets";
+                      
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
                         alert("Nije uneseno u bazu:\n" + errorMessage);
@@ -528,10 +528,11 @@
                 })
                 $('#atContent').each(function () {
                     $.ajax({
-                        url: '/Attachments/Create',
+                        url: '/Attachments/Edit' + $('#ID').val(),
                         type: 'POST',
                         datatype: 'json',
                         data: {
+                            ID: $('#ID').val(),
                             FleetNo: $('#FleetNo').val(),
                             Name: $('#AttachmentName').val(),
                             Extension: $('#AttachmentExtension').val(),
@@ -541,6 +542,8 @@
                         },
                         success: function (jqXhr, textStatus, errorMessage) {
 
+                            location.href = "/FleetAssets";
+
                         },
                         error: function (jqXhr, textStatus, errorMessage) {
                             alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
@@ -548,6 +551,7 @@
                     })
                 })
             })
+        })
     </script>
 }
 
