@@ -39,6 +39,7 @@ namespace VehicleSetup3.Controllers
                 cl = db.Compliences.Where(c => fleetAsset.FleetNo == c.FleetNo).ToList(),
                 cp = db.Capacities.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList(),
                 af = db.AdditionalFields.Where(a => fleetAsset.FleetNo == a.FleetNo).ToList(),
+                at = db.Attachments.Where(r => fleetAsset.FleetNo ==  r.FleetNo).ToList(),
             };
             return View(fabl);
         }
@@ -98,6 +99,7 @@ namespace VehicleSetup3.Controllers
                 cp = db.Capacities.Where(w => fleetAsset.FleetNo == w.FleetNo).ToList(),
                 cl = db.Compliences.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList(),
                 af = db.AdditionalFields.Where(r => fleetAsset.FleetNo == r.FleetNo).ToList(),
+                at = db.Attachments.Where(r => fleetAsset.FleetNo == r.FleetNo).ToList(),
             };
 
             ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType", fleetAsset.SubTypeID);

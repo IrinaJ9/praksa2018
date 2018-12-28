@@ -11,5 +11,6 @@ namespace VehicleSetup3.Models
         public List<Complience> cl;
         public List<Capacity> cp;
         public List<AdditionalField> af;
+        public List<Attachment> at;
     }
 }

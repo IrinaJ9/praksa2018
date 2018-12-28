@@ -76,7 +76,8 @@
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
+                @*<input type="submit" value="Create" class="btn btn-default" />*@
+                <input type="button" value="Create" id="Save" class="btn btn-success" />
             </div>
         </div>
     </div>
@@ -88,4 +89,30 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script>
+    $(document).ready(function () {
+        $('#Save').click(function () {
+            $.ajax({
+                url: '/Attachments/Create',
+                type: 'POST',
+                datatype: 'json',
+                data: {
+                    FleetNo: $('#FleetNo').val(),
+                    Name: $('#AttachmentName').val(),
+                    Extension: $('#AttachmentExtension').val(),
+                    Size: $('#AttachmentSize').val(),
+                    Path: $('#AttachmentPath').val(),
+                    Image: "",
+                    IsDefaultImage: $('#IsDefaultImage').is(":checked").valueOf(),
+                },
+                success: function (jqXhr, textStatus, errorMessage) {
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                    alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
+                }
+            })
+        })
+    })
+    </script>
 }

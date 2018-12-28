@@ -24,6 +24,10 @@
         <li>
             <a class="nav-link" data-toggle="tab" href="#AdditonalFields">AdditonalFields</a>
         </li>
+        <li>
+            <a class="nav-link" data-toggle="tab" href="#Attachments">Attachments</a>
+        </li>
+
 
 
     </ul>
@@ -287,6 +291,69 @@
 
                     </dl>
                     <hr />
+                }
+            </div>
+            <div id="Attachments" class="tab-pane fade">
+                @foreach (var item in Model.at)
+                {
+                    <dl class="dl-horizontal">
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.Name)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Name)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.Extension)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Extension)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.Size)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Size)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.Path)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Path)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.Image)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.Image)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.IsDefaultImage)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.IsDefaultImage)
+                        </dd>
+
+                        <dt>
+                            @Html.DisplayNameFor(modelItem => item.FleetAsset.RegistrationNo)
+                        </dt>
+
+                        <dd>
+                            @Html.DisplayFor(modelItem => item.FleetAsset.RegistrationNo)
+                        </dd>
+
+                    </dl>
                 }
             </div>
         </div>
