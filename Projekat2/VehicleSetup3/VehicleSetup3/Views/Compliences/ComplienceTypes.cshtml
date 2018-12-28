@@ -7,8 +7,12 @@
 
 <h2>ComplienceTypes</h2>
 
+<p>
+    @Html.ActionLink("Create New Complience", "Create")
+</p>
+
 <ul class="nav nav-pills">
-    @*<li class="active"><a data-toggle="pill" href="#home">Home</a></li>*@ 
+    @*<li class="active"><a data-toggle="pill" href="#home">Home</a></li>*@
     <li><a data-toggle="pill" href="#accsubcontr">Accreditation SubContractor</a></li>
     <li><a data-toggle="pill" href="#acctra">Accreditation Trailer</a></li>
     <li><a data-toggle="pill" href="#accdriv">Accreditation Driver</a></li>
@@ -90,26 +94,26 @@
             {
                 if (item.ComplienceTypeID == 4 && item.SubTypeID == 4)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ValidFromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateObtained)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
-            </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValidFromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateObtained)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
+                    </tr>
                 }
             }
         </table>
@@ -139,26 +143,26 @@
             {
                 if (item.ComplienceTypeID == 2 && item.SubTypeID == 1)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ValidFromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateObtained)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
-            </tr>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValidFromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateObtained)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
+                    </tr>
                 }
             }
         </table>
@@ -179,18 +183,18 @@
             {
                 if (item.ComplienceTypeID == 6 && item.SubTypeID == 1)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -212,18 +216,18 @@
             {
                 if (item.ComplienceTypeID == 6 && item.SubTypeID == 2)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -251,24 +255,24 @@
             {
                 if (item.ComplienceTypeID == 2 && item.SubTypeID == 3)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ValidFromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateObtained)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValidFromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateObtained)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -302,30 +306,30 @@
             {
                 if (item.ComplienceTypeID == 1 && item.SubTypeID == 1)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LicenceClass)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LicenseNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ValidFromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LicenceClass)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LicenseNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValidFromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -347,18 +351,18 @@
             {
                 if (item.ComplienceTypeID == 5 && item.SubTypeID == 4)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -382,18 +386,18 @@
                 if (item.ComplienceTypeID == 5 && item.SubTypeID == 3
 )
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -426,31 +430,31 @@
             {
                 if (item.ComplienceTypeID == 3 && item.SubTypeID == 4)
                 {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ValidFromDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateObtained)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LicenseNo)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ValidFromDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateObtained)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LicenseNo)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
 
-            </tr>
+                    </tr>
                 }
             }
         </table>
@@ -484,28 +488,28 @@
             {
                 if (item.ComplienceTypeID == 3 && item.SubTypeID == 3)
                 {
-            <tr>
+                    <tr>
 
-                <td>
-                    @Html.DisplayFor(modelItem => item.FleetNo)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.ExpiryDate)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.AlertOperation)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.DateObtained)
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.LicenseNo)
-                </td>
-                <td>
-                    @Html.ActionLink("Edit", "Edit", new { id = item.ID })
-                </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.FleetNo)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.ExpiryDate)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.AlertOperation)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.DateObtained)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.LicenseNo)
+                        </td>
+                        <td>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.ID })
+                        </td>
 
-            </tr>
+                    </tr>
                 }
             }
         </table>

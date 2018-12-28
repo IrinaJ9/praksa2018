@@ -43,12 +43,11 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Create
-        [Authorize]
         public ActionResult Create()
         {
-            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
+            ViewBag.SubTypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class");
-            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo");
+            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "FleetNo");
             return View();
         }
 
