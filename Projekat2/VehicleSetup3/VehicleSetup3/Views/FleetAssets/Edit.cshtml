@@ -445,111 +445,112 @@
                     },
                     success: function (data, status, xhr) {
 
-                      
+                        //Capacity
+                        $("div").each(function (index) {
+                            if ($(this).is("#cpContent")) {
+                                $.ajax({
+                                    url: '/Capacities/Edit/' + $('#ID').val(),
+                                    type: 'POST',
+                                    datatype: 'json',
+                                    data: {
+                                        ID: $('#ID').val,
+                                        FleetNo: $('#fa_FleetNo').val(),
+                                        Pallets: $('#Pallets').val(),
+                                        Spaces: $('#Spaces').val(),
+                                        CubicSpace: $('#CubicSpaces').val(),
+                                        InternalHeight: $('#InternalHeight').val(),
+                                        InternalWidth: $('#InternalWidth').val(),
+                                        InternalLenght: $('#InternalLenght').val(),
+                                        Tare: $('#Tare').val(),
+                                        GVM: $('#GVM').val(),
+                                        GCM: $('#GCM').val(),
+                                        IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
+                                        AxelWeight1: $('#AxelWeight1').val(),
+                                        AxelWeight2: $('#AxelWeight2').val(),
+                                        AxelWeight3: $('#AxelWeight3').val(),
+                                    },
+                                    success: function (data, status, xhr) {
+
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
+                                    }
+                                })
+                            }
+                        //Compliences
+                            if ($(this).is("#cplContent")) {
+                                $.ajax({
+                                    url: '/Compliences/Edit/' + $('#ID').val(),
+                                    type: 'POST',
+                                    datatype: 'json',
+                                    data: {
+                                        ID: $('#ID').val,
+                                        FleetNo: $('#fa_FleetNo').val(),
+                                        LicenceClass: $('#LicenceClass').val(),
+                                        LicenceNo: $('#LicenceNo').val(),
+                                        DateObtained: $('#DateObtained').val(),
+                                        ValidFromDate: $('#ValidFromDate').val(),
+                                        ExpiriyDate: $('#ExpiriyDate').val(),
+                                        AllertOperation: $('#AllertOperation').val(),
+                                    },
+                                    success: function (data, status, xhr) {
+
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
+                                    }
+                                })
+                            }
+                        //AdditionalFields
+                            if ($(this).is("#afContent")) {
+                                $.ajax({
+                                    url: '/AdditionalFields/Edit/' + $('#ID').val(),
+                                    type: 'POST',
+                                    datatype: 'json',
+                                    data: {
+                                        ID: $('#ID').val,
+                                        FleetNo: $('#fa_FleetNo').val(),
+                                        Name: $("#AdditionalFieldName").val(),
+                                        Value: $("#AdditionalFieldValue").val(),
+                                    },
+                                    success: function (data, status, xhr) {
+
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
+                                    }
+                                })
+                            }
+                        //Attachment
+                            if ($(this).is("#atContent")) {
+                                $.ajax({
+                                    url: '/Attachments/Edit/' + $('#ID').val(),
+                                    type: 'POST',
+                                    datatype: 'json',
+                                    data: {
+                                        ID: $('#ID').val(),
+                                        FleetNo: $('#FleetNo').val(),
+                                        Name: $('#AttachmentName').val(),
+                                        Extension: $('#AttachmentExtension').val(),
+                                        Size: $('#AttachmentSize').val(),
+                                        Path: $('#AttachmentPath').val(),
+                                        IsDefaultImage: $('#IsDefaultImage').is(":checked").valueOf(),
+                                    },
+                                    success: function (jqXhr, textStatus, errorMessage) {
+                                    },
+                                    error: function (jqXhr, textStatus, errorMessage) {
+                                        alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
+                                    }
+                                })
+                            }
+                        })
+
+                        location.href = "/FleetAssets";
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
                         alert("Nije uneseno u bazu:\n" + errorMessage);
                     }
                 });
-                //Capacity
-                $('#cpContent').each(function () {
-                    $.ajax({
-                        url: '/Capacities/Edit/' + $('#ID').val(),
-                        type: 'POST',
-                        datatype: 'json',
-                        data: {
-                            ID: $('#ID').val,
-                            FleetNo: $('#fa_FleetNo').val(),
-                            Pallets: $('#Pallets').val(),
-                            Spaces: $('#Spaces').val(),
-                            CubicSpace: $('#CubicSpaces').val(),
-                            InternalHeight: $('#InternalHeight').val(),
-                            InternalWidth: $('#InternalWidth').val(),
-                            InternalLenght: $('#InternalLenght').val(),
-                            Tare: $('#Tare').val(),
-                            GVM: $('#GVM').val(),
-                            GCM: $('#GCM').val(),
-                            IsMainCapacity: $('#IsMainCapacity').is(":checked").valueOf(),
-                            AxelWeight1: $('#AxelWeight1').val(),
-                            AxelWeight2: $('#AxelWeight2').val(),
-                            AxelWeight3: $('#AxelWeight3').val(),
-                        },
-                        success: function (data, status, xhr) {
-
-                        },
-                        error: function (jqXhr, textStatus, errorMessage) {
-                            alert("Nije uneseno u tabelu Capacity:\n" + errorMessage);
-                        }
-                    })
-                })
-                //Compliences
-                $('#cplContent').each(function () {
-                    $.ajax({
-                        url: '/Compliences/Edit/' + $('#ID').val(),
-                        type: 'POST',
-                        datatype: 'json',
-                        data: {
-                            ID: $('#ID').val,
-                            FleetNo: $('#fa_FleetNo').val(),
-                            LicenceClass: $('#LicenceClass').val(),
-                            LicenceNo: $('#LicenceNo').val(),
-                            DateObtained: $('#DateObtained').val(),
-                            ValidFromDate: $('#ValidFromDate').val(),
-                            ExpiriyDate: $('#ExpiriyDate').val(),
-                            AllertOperation: $('#AllertOperation').val(),
-                        },
-                        success: function (data, status, xhr) {
-
-                        },
-                        error: function (jqXhr, textStatus, errorMessage) {
-                            alert("Nije uneseno u tabelu Complience:\n" + errorMessage);
-                        }
-                    })
-                })
-                //AdditionalFields
-                $('#afContent').each(function () {
-                    $.ajax({
-                        url: '/AdditionalFields/Edit/' + $('#ID').val(),
-                        type: 'POST',
-                        datatype: 'json',
-                        data: {
-                            ID: $('#ID').val,
-                            FleetNo: $('#fa_FleetNo').val(),
-                            Name: $("#AdditionalFieldName").val(),
-                            Value: $("#AdditionalFieldValue").val(),
-                        },
-                        success: function (data, status, xhr) {
-
-                        },
-                        error: function (jqXhr, textStatus, errorMessage) {
-                            alert("Nije uneseno u tabelu AdditionalFields:\n" + errorMessage);
-                        }
-                    })
-                })
-                $('#atContent').each(function () {
-                    $.ajax({
-                        url: '/Attachments/Edit' + $('#ID').val(),
-                        type: 'POST',
-                        datatype: 'json',
-                        data: {
-                            ID: $('#ID').val(),
-                            FleetNo: $('#FleetNo').val(),
-                            Name: $('#AttachmentName').val(),
-                            Extension: $('#AttachmentExtension').val(),
-                            Size: $('#AttachmentSize').val(),
-                            Path: $('#AttachmentPath').val(),
-                            IsDefaultImage: $('#IsDefaultImage').is(":checked").valueOf(),
-                        },
-                        success: function (jqXhr, textStatus, errorMessage) {
-
-                            location.href = "/FleetAssets";
-
-                        },
-                        error: function (jqXhr, textStatus, errorMessage) {
-                            alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
-                        }
-                    })
-                })
             })
         })
     </script>
