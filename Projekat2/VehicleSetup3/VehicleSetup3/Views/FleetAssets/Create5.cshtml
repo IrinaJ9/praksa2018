@@ -192,15 +192,6 @@
                 </div>
 
                 <div class="form-group">
-                    @Html.LabelFor(model => model.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        <div class="checkbox">
-                            @Html.EditorFor(model => model.IsMainCapacity)
-                            @Html.ValidationMessageFor(model => model.IsMainCapacity, "", new { @class = "text-danger" })
-                        </div>
-                    </div>
-                </div>
-                <div class="form-group">
                     @Html.LabelFor(model => model.AxelWeight1, htmlAttributes: new { @class = "control-label col-md-2" })
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.AxelWeight1, new { htmlAttributes = new { @class = "form-control" } })
@@ -221,6 +212,15 @@
                     <div class="col-md-10">
                         @Html.EditorFor(model => model.AxelWeight3, new { htmlAttributes = new { @class = "form-control" } })
                         @Html.ValidationMessageFor(model => model.AxelWeight3, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(model => model.IsMainCapacity, htmlAttributes: new { @class = "control-label col-md-2" })
+                    <div class="col-md-10">
+                        <div class="checkbox">
+                            @Html.EditorFor(model => model.IsMainCapacity)
+                            @Html.ValidationMessageFor(model => model.IsMainCapacity, "", new { @class = "text-danger" })
+                        </div>
                     </div>
                 </div>
             </div>
@@ -384,6 +384,7 @@
                     </div>
                 </div>
         </div>
+        </div>
     </div>
 
 
@@ -406,7 +407,7 @@
             $('#Save').click(function () {
             //FleetAsset
                 $.ajax({
-                    url: '/fleetAssets/Create',
+                    url: '/FleetAssets/Create',
                     type: 'POST',
                     datatype: 'json',
                     data: {
@@ -530,8 +531,6 @@
 
                     },
                     error: function (jqXhr, textStatus, errorMessage) {
-                        console.log("FleetAsset ajax");
-                        console.log(errorMessage);
                         alert("Nije uneseno u bazu:\n" + errorMessage);
                     }
                 });
