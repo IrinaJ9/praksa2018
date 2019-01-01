@@ -156,6 +156,7 @@ namespace VehicleSetup3.Controllers
             List<Complience> complFA = db.Compliences.Where(c => fleetAsset.FleetNo == c.FleetNo).ToList();
             List<AdditionalField> addfFA = db.AdditionalFields.Where(a => fleetAsset.FleetNo == a.FleetNo).ToList();
             List<Capacity> capalFA = db.Capacities.Where(v => fleetAsset.FleetNo == v.FleetNo).ToList();
+            List<Attachment> attaFA = db.Attachments.Where(g => fleetAsset.FleetNo == g.FleetNo).ToList();
             //delete capacities with this FANo
             foreach (Capacity cap in capalFA)
                 db.Capacities.Remove(cap);
@@ -168,6 +169,9 @@ namespace VehicleSetup3.Controllers
             foreach (AdditionalField ad in addfFA)
                 db.AdditionalFields.Remove(ad);
 
+            //delete Attachment Fields with this FANo
+            foreach (Attachment at in attaFA)
+                db.Attachments.Remove(at);
             //delete this FA
             db.FleetAssets.Remove(fleetAsset);
             db.SaveChanges();

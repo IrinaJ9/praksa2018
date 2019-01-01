@@ -37,5 +37,10 @@ namespace VehicleSetup3.Models
         public virtual DbSet<FleetAssetMake> FleetAssetMakes { get; set; }
         public virtual DbSet<FleetAssetModel> FleetAssetModels { get; set; }
         public virtual DbSet<FuelType> FuelTypes { get; set; }
+        public virtual DbSet<AspNetRole> AspNetRoles { get; set; }
+        public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
+        public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
+        public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
+        
     }
 }

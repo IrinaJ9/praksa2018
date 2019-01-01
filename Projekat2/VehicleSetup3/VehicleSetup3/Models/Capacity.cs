@@ -11,15 +11,12 @@ namespace VehicleSetup3.Models
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-
+    
     public partial class Capacity
     {
         public int ID { get; set; }
         public string FleetNo { get; set; }
-        [Range(0,99)]
         public Nullable<int> Pallets { get; set; }
-        [Range(0, 99)]
         public Nullable<int> Spaces { get; set; }
         public Nullable<decimal> CubicSpace { get; set; }
         public Nullable<decimal> InternalHeight { get; set; }
