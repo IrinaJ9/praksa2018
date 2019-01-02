@@ -10,7 +10,7 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = "Admin")]
 
     public class ComplienceTypesController : Controller
     {

@@ -41,6 +41,7 @@ namespace VehicleSetup3.Models
         public virtual DbSet<AspNetUserClaim> AspNetUserClaims { get; set; }
         public virtual DbSet<AspNetUserLogin> AspNetUserLogins { get; set; }
         public virtual DbSet<AspNetUser> AspNetUsers { get; set; }
-        
+
+        public System.Data.Entity.DbSet<VehicleSetup3.Models.UserList> UserLists { get; set; }
     }
 }

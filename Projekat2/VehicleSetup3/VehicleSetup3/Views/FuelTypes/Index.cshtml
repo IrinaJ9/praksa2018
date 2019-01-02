@@ -24,9 +24,9 @@
             @Html.DisplayFor(modelItem => item.Fuel)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+            @Html.ActionLink(" ", "Edit", new { id = item.ID }, new { @class = "btn btn-secondary glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Details", new { id = item.ID }, new { @class = "btn btn-info glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.ID }, new { @class = "btn btn-danger glyphicon glyphicon - trash" })
         </td>
     </tr>
 }

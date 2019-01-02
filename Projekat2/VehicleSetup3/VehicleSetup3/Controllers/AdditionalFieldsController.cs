@@ -10,6 +10,8 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
+
+    [Authorize(Roles = "User")]
     public class AdditionalFieldsController : Controller
     {
         private VehicleSetupEntities db = new VehicleSetupEntities();

@@ -15,7 +15,7 @@ namespace VehicleSetup3.Controllers
         private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: Capacities
-        [Authorize]
+        [Authorize (Roles = "Admin")]
 
         public ActionResult Index()
         {
@@ -24,7 +24,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Details/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
 
         public ActionResult Details(int? id)
         {
@@ -65,7 +65,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Edit/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -98,7 +98,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Delete/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -116,7 +116,7 @@ namespace VehicleSetup3.Controllers
         // POST: Capacities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Capacity capacity = db.Capacities.Find(id);

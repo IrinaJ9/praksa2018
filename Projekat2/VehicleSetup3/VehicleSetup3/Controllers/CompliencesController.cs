@@ -15,19 +15,21 @@ namespace VehicleSetup3.Controllers
         private VehicleSetupEntities db = new VehicleSetupEntities();
 
         // GET: Compliences
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Index()
         {
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
+
+        [Authorize(Roles = "User")]
         public ActionResult ComplienceTypes()
         {
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
         // GET: Compliences/Details/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -71,7 +73,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Edit/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -108,7 +110,7 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Compliences/Delete/5
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -126,7 +128,7 @@ namespace VehicleSetup3.Controllers
         // POST: Compliences/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        [Authorize]
+        [Authorize (Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Complience complience = db.Compliences.Find(id);

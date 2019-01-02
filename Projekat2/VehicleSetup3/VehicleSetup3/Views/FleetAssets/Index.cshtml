@@ -78,9 +78,9 @@
             @Html.DisplayFor(modelItem => item.FuelType.Fuel)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FleetNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FleetNo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FleetNo })
+            @Html.ActionLink(" ", "Edit", new { id = item.FleetNo }, new { @class = "btn btn-secondary glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Details", new { id = item.FleetNo }, new { @class = "btn btn-info glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.FleetNo }, new { @class = "btn btn-danger glyphicon glyphicon - trash" })
         </td>
     </tr>
 }
