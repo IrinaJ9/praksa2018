@@ -260,4 +260,6 @@ paket-files/
 __pycache__/
 *.pyc
 
-Projekat2/VehicleSetup3/VehicleSetup3/Web.config
+Projekat2/VehicleSetup3/VehicleSetup3/Web\.config
+
+Projekat2/VehicleSetup3/VehicleSetup3/obj/

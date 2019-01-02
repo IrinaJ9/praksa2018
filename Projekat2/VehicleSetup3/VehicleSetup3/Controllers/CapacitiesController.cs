@@ -15,6 +15,8 @@ namespace VehicleSetup3.Controllers
         
 
         // GET: Capacities
+        [Authorize (Roles = "Admin")]
+
         public ActionResult Index()
         {
             var capacities = db.Capacities.Include(c => c.FleetAsset);
@@ -22,6 +24,8 @@ namespace VehicleSetup3.Controllers
         }
 
         // GET: Capacities/Details/5
+        [Authorize (Roles = "Admin")]
+
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -47,21 +51,21 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FleetNo,Pallets,Spaces,CubicSpace,InternalHeight,InternalWidht,InternalLenght,Tare,GVM,GCM,IsMainCapacity")] Capacity capacity)
+        public JsonResult Create(Capacity capacity)
         {
             if (ModelState.IsValid)
             {
                 db.Capacities.Add(capacity);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", capacity.FleetNo);
-            return View(capacity);
+            return Json(capacity);
         }
 
         // GET: Capacities/Edit/5
+        [Authorize (Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -81,20 +85,20 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,Pallets,Spaces,CubicSpace,InternalHeight,InternalWidht,InternalLenght,Tare,GVM,GCM,IsMainCapacity")] Capacity capacity)
+        public JsonResult Edit(Capacity capacity)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(capacity).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", capacity.FleetNo);
-            return View(capacity);
+            return Json(capacity);
         }
 
         // GET: Capacities/Delete/5
+        [Authorize (Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -112,6 +116,7 @@ namespace VehicleSetup3.Controllers
         // POST: Capacities/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize (Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Capacity capacity = db.Capacities.Find(id);

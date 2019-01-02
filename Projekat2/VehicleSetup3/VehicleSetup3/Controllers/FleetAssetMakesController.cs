@@ -10,7 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class FleetAssetMakesController : BaseController
+    [Authorize(Roles = "Admin")]
+
+    public class FleetAssetMakesController : Controller
     {
 
         // GET: FleetAssetMakes
@@ -45,7 +47,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Manufacturer")] FleetAssetMake fleetAssetMake)
+        public ActionResult Create(FleetAssetMake fleetAssetMake)
         {
             if (ModelState.IsValid)
             {
@@ -77,7 +79,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Manufacturer")] FleetAssetMake fleetAssetMake)
+        public ActionResult Edit(FleetAssetMake fleetAssetMake)
         {
             if (ModelState.IsValid)
             {

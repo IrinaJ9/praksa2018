@@ -11,18 +11,41 @@
 <body>
     <div class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary">
         <div class="container">
-            <div class="navbar-brand">
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
-                <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
                 </button>
+                @Html.ActionLink("Vehicle setup", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
-            <div class="navbar-collapse collapse" id="navbarColor01" style="">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">@Html.ActionLink("Home", "Index", "Home", htmlAttributes: new { @class = "nav-link" })</li>
-                    <li class="nav-item active">@Html.ActionLink("About", "About", "Home", htmlAttributes: new { @class = "nav-link" })</li>
-                    <li class="nav-item active">@Html.ActionLink("Contact", "Contact", "Home", htmlAttributes: new { @class = "nav-link" })</li>
-                </ul>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Fleet Asset", "Index", "FleetAssets")</li>
+                    <li>@Html.ActionLink("Additional Fields", "Index", "AdditionalFields")</li>
+                    <li>@Html.ActionLink("Complience", "ComplienceTypes", "Compliences")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>
+                            <a href="#" class="dropdown-toggle" type="button" data-toggle="dropdown">Admin Section<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Asset SubType", "Index", "AssetSubTypes")</li>
+                                <li>@Html.ActionLink("Asset Type", "Index", "AssetTypes")</li>
+                                <li>@Html.ActionLink("Attachments", "Index", "Attachments")</li>
+                                <li>@Html.ActionLink("Capacities", "Index", "Capacities")</li>
+                                <li>@Html.ActionLink("Compliences List", "Index", "Compliences")</li>
+                                <li>@Html.ActionLink("Compliences SubType", "Index", "CompliencesSubTypes")</li>
+                                <li>@Html.ActionLink("Compliences Type", "Index", "CompliencesTypes")</li>
+                                <li>@Html.ActionLink("Fleet Asset Makes", "Index", "FleetAssetMakes")</li>
+                                <li>@Html.ActionLink("Fleet Asset Model", "Index", "FleetAssetModels")</li>
+                                <li>@Html.ActionLink("Fuel Type", "Index", "FuelTypes")</li>
+                                <li><hr /></li>
+                                <li>@Html.ActionLink("User list", "Index", "UserLists")</li>
+                            </ul>
+                        </li>
+                    }
+
+                    </ul>
                 @Html.Partial("_LoginPartial")
             </div>
         </div>

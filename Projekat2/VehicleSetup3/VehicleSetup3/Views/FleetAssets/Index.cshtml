@@ -13,6 +13,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.FleetNo)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.RegistrationNo)
         </th>
         <th>
@@ -45,6 +48,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.FleetNo)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.RegistrationNo)
         </td>
         <td>
@@ -72,9 +78,9 @@
             @Html.DisplayFor(modelItem => item.FuelType.Fuel)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.FleetNo }) |
-            @Html.ActionLink("Details", "Details", new { id=item.FleetNo }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.FleetNo })
+            @Html.ActionLink(" ", "Edit", new { id = item.FleetNo }, new { @class = "btn btn-secondary glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Details", new { id = item.FleetNo }, new { @class = "btn btn-info glyphicon glyphicon-cog" }) |
+            @Html.ActionLink(" ", "Delete", new { id = item.FleetNo }, new { @class = "btn btn-danger glyphicon glyphicon - trash" })
         </td>
     </tr>
 }

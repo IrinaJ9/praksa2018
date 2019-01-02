@@ -10,7 +10,9 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    public class ComplienceSubTypesController : BaseController
+    [Authorize(Roles = "Admin")]
+
+    public class ComplienceSubTypesController : Controller
     {
         
 
@@ -46,7 +48,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Name")] ComplienceSubType complienceSubType)
+        public ActionResult Create(ComplienceSubType complienceSubType)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +80,7 @@ namespace VehicleSetup3.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Name")] ComplienceSubType complienceSubType)
+        public ActionResult Edit(ComplienceSubType complienceSubType)
         {
             if (ModelState.IsValid)
             {

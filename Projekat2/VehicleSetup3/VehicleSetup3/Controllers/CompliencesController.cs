@@ -14,12 +14,21 @@ namespace VehicleSetup3.Controllers
     {
 
         // GET: Compliences
+        [Authorize (Roles = "Admin")]
         public ActionResult Index()
         {
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
             return View(compliences.ToList());
         }
+
+        [Authorize(Roles = "User")]
+        public ActionResult ComplienceTypes()
+        {
+            var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);
+            return View(compliences.ToList());
+        }
         // GET: Compliences/Details/5
+        [Authorize (Roles = "Admin")]
         public ActionResult Details(int? id)
         {
             if (id == null)
@@ -37,9 +46,9 @@ namespace VehicleSetup3.Controllers
         // GET: Compliences/Create
         public ActionResult Create()
         {
-            ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
+            ViewBag.SubTypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name");
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class");
-            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo");
+            ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "FleetNo");
             return View();
         }
 
@@ -47,23 +56,23 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,FleetNo,ComplienceTypeID,TypeID,LicenceClass,LicenseNo,DateObtained,ValidFromDate,ExpiryDate,AlertOperation")] Complience complience)
+        public JsonResult Create( Complience complience)
         {
             if (ModelState.IsValid)
             {
                 db.Compliences.Add(complience);
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
 
             ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
-            return View(complience);
+            return Json(complience);
         }
 
         // GET: Compliences/Edit/5
+        [Authorize (Roles = "Admin")]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -85,22 +94,22 @@ namespace VehicleSetup3.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,FleetNo,ComplienceTypeID,TypeID,LicenceClass,LicenseNo,DateObtained,ValidFromDate,ExpiryDate,AlertOperation")] Complience complience)
+        public JsonResult Edit(Complience complience)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(complience).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Index");
+                //return RedirectToAction("Index");
             }
             ViewBag.TypeID = new SelectList(db.ComplienceSubTypes, "ID", "Name", complience.SubTypeID);
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class", complience.ComplienceTypeID);
             ViewBag.FleetNo = new SelectList(db.FleetAssets, "FleetNo", "RegistrationNo", complience.FleetNo);
-            return View(complience);
+            return Json(complience);
         }
 
         // GET: Compliences/Delete/5
+        [Authorize (Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -118,6 +127,7 @@ namespace VehicleSetup3.Controllers
         // POST: Compliences/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize (Roles = "Admin")]
         public ActionResult DeleteConfirmed(int id)
         {
             Complience complience = db.Compliences.Find(id);

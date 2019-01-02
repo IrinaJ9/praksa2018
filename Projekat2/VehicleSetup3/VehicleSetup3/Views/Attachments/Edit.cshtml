@@ -90,4 +90,30 @@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+<script>
+    $(document).ready(function () {
+        $('#Save').click(function () {
+            $.ajax({
+                url: '/Attachments/Create' + $('#ID').val(),
+                type: 'POST',
+                datatype: 'json',
+                data: {
+                    FleetNo: $('#FleetNo').val(),
+                    Name: $('#AttachmentName').val(),
+                    Extension: $('#AttachmentExtension').val(),
+                    Size: $('#AttachmentSize').val(),
+                    Path: $('#AttachmentPath').val(),
+                    Image: "",
+                    IsDefaultImage: $('#IsDefaultImage').is(":checked").valueOf(),
+                },
+                success: function (jqXhr, textStatus, errorMessage) {
+
+                },
+                error: function (jqXhr, textStatus, errorMessage) {
+                    alert("Nije uneseno u tabelu Attachments:\n" + errorMessage);
+                }
+            })
+        })
+    })
+</script>
 }
