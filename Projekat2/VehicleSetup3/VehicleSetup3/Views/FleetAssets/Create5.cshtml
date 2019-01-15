@@ -402,11 +402,12 @@
     @section Scripts {
         @Scripts.Render("~/bundles/jqueryval")
         <script>
-            $(document).ready(function () {
+            $(document).ready(function () { 
                 var i = 0;
                 //Dugme Save
                 $('#Save').click(function () {
                     //FleetAsset
+                    $.validate.unobtrusive.parse("form");
                     $.ajax({
                         url: '/FleetAssets/Create',
                         type: 'POST',
@@ -533,7 +534,7 @@
                         },
                         error: function (jqXhr, textStatus, errorMessage) {
                             alert("Nije uneseno u bazu:\n" + errorMessage);
-                        }
+                        };
                     });
                 })
 

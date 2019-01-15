@@ -23,7 +23,7 @@ namespace VehicleSetup3
             var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
 
-            // In Startup iam creating first Admin Role and creating a default Admin User     
+            // In Startup i'm creating first Admin Role and creating a default Admin User     
             if (!roleManager.RoleExists("Admin"))
             {
 

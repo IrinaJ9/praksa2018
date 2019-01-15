@@ -22,7 +22,7 @@ namespace VehicleSetup3.Controllers
             return View(compliences.ToList());
         }
 
-        [Authorize(Roles = "User")]
+        [Authorize(Roles = "User,Admin")]
         public ActionResult ComplienceTypes()
         {
             var compliences = db.Compliences.Include(c => c.ComplienceSubType).Include(c => c.ComplienceType).Include(c => c.FleetAsset);

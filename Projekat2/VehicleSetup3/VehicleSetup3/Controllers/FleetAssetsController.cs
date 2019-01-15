@@ -10,7 +10,7 @@ using VehicleSetup3.Models;
 
 namespace VehicleSetup3.Controllers
 {
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "User,Admin")]
     public class FleetAssetsController : Controller
     {
         private VehicleSetupEntities db = new VehicleSetupEntities();
@@ -57,6 +57,15 @@ namespace VehicleSetup3.Controllers
             ViewBag.ComplienceTypeID = new SelectList(db.ComplienceTypes, "ID", "Class");
             var fab = new FleetAssetBig();
             return View("Create5", fab);
+        }
+        public ActionResult Create0()
+        {
+            ViewBag.SubTypeID = new SelectList(db.AssetSubTypes, "ID", "SubType");
+            ViewBag.TypeID = new SelectList(db.AssetTypes, "ID", "Type");
+            ViewBag.FleetAssetMakeID = new SelectList(db.FleetAssetMakes, "ID", "Manufacturer");
+            ViewBag.FleetAssetModelID = new SelectList(db.FleetAssetModels, "ID", "Name");
+            ViewBag.FuelTypeID = new SelectList(db.FuelTypes, "ID", "Fuel");
+            return View();
         }
 
         // POST: FleetAssets/Create

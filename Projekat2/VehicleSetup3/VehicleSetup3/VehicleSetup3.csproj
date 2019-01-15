@@ -351,7 +351,6 @@
     <Content Include="Views\FleetAssetModels\Details.cshtml" />
     <Content Include="Views\FleetAssetModels\Edit.cshtml" />
     <Content Include="Views\FleetAssetModels\Index.cshtml" />
-    <Content Include="Views\FleetAssets\Create.cshtml" />
     <Content Include="Views\FleetAssets\Delete.cshtml" />
     <Content Include="Views\FleetAssets\Details.cshtml" />
     <Content Include="Views\FleetAssets\Edit.cshtml" />
@@ -407,6 +406,7 @@
     <Content Include="Views\FleetAssets\Edit0.cshtml" />
     <Content Include="Views\UserLists\Delete.cshtml" />
     <Content Include="Views\UserLists\Index.cshtml" />
+    <Content Include="Views\FleetAssets\Create0.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

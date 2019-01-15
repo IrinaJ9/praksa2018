@@ -11,7 +11,7 @@ using VehicleSetup3.Models;
 namespace VehicleSetup3.Controllers
 {
 
-    [Authorize(Roles = "User")]
+    [Authorize(Roles = "User,Admin")]
     public class AdditionalFieldsController : Controller
     {
         private VehicleSetupEntities db = new VehicleSetupEntities();
